@@ -35,8 +35,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnTerug = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -112,12 +112,24 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.btnTerug);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(302, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 521);
             this.panel2.TabIndex = 5;
+            // 
+            // btnTerug
+            // 
+            this.btnTerug.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnTerug.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTerug.Location = new System.Drawing.Point(490, 71);
+            this.btnTerug.Name = "btnTerug";
+            this.btnTerug.Size = new System.Drawing.Size(108, 388);
+            this.btnTerug.TabIndex = 1;
+            this.btnTerug.Text = "Terug";
+            this.btnTerug.UseVisualStyleBackColor = false;
+            this.btnTerug.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
@@ -129,25 +141,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welkom bij het Hoofdmenu";
             // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(490, 71);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(108, 388);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Terug";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // Form2
+            // frmhoofdmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 522);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "Form2";
+            this.Name = "frmhoofdmenu";
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -166,6 +167,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTerug;
     }
 }

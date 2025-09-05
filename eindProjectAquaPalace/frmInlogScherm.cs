@@ -48,8 +48,9 @@ namespace eindProjectAquaPalace
             {
                 GebruikersNaam = gebruikersobject.firstname + " " + gebruikersobject.lastname;
 
-                //frmHoofdMenu frmHoofdMenu = new frmHoofdMenu();
-                //frmHoofdMenu.Show();
+                // Corrected the variable name to avoid conflict with the class name
+                frmhoofdmenu hoofdMenuForm = new frmhoofdmenu();
+                hoofdMenuForm.Show();
                 this.Hide();
             }
             else

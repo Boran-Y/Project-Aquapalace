@@ -16,5 +16,13 @@ namespace eindProjectAquaPalace
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if(frmhoofdmenu.ActiveForm != null)
+            {
+                frmhoofdmenu.ActiveForm.Hide();
+            }
+        }
     }
 }
