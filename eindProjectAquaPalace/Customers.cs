@@ -15,7 +15,7 @@ namespace eindProjectAquaPalace
         public string Voorletters;
         public string Achternaam;
         public string Straat;
-        public string Postcode;
+        public string Postcode;  
         public string Woonplaats;
         public string Telefoon;
         public string email;
