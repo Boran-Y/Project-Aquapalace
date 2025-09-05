@@ -1,6 +1,6 @@
 ﻿namespace eindProjectAquaPalace
 {
-    partial class Form2
+    partial class frmhoofdmenu
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
-    public partial class Form2 : Form
+    public partial class frmhoofdmenu : Form
     {
-        public Form2()
+        public frmhoofdmenu()
         {
             InitializeComponent();
         }
