@@ -18,7 +18,7 @@ namespace eindProjectAquaPalace
         public string Postcode;  
         public string Woonplaats;
         public string Telefoon;
-        public string email;
+        public string email = "test";
         public override string ToString()
         {
             return $"{this.Voorletters}  {this.Achternaam} te {this.Woonplaats} Telnr.{this.Telefoon}";
