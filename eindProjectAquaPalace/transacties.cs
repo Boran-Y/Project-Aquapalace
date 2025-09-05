@@ -41,11 +41,15 @@ namespace eindProjectAquaPalace
                 transactiesobj.transactie_datum = Convert.ToDateTime("transactie_datum");
                 transactiesobj.bedrag = Convert.ToInt32("bedrag");
                 transactiesobj.betaalmethode = Convert.ToString("betaalmethode");
+                transactiesobj.status = Convert.ToString("status");
+                transactiesList.Add(transactiesobj);
 
 
 
 
             }
+            con.Close();
+            return transactiesList;
 
 
 
@@ -53,5 +57,25 @@ namespace eindProjectAquaPalace
 
 
         }
+
+        public static string aantalTransacties()
+        {
+            MySqlConnection con = Database.start();
+            con.Open();
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"SELECT COUNT(*) FROM transacties;";
+            string aantaltransacties = Convert.ToString(myCommand.ExecuteScalar());
+            con.Close();
+            return aantaltransacties;
+        }
+
+        public static string aantalTransacties_
+        {
+            get { return aantalTransacties(); }
+        }
+
+
+
     }
 }
