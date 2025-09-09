@@ -117,6 +117,12 @@
     <Compile Include="frmInlogScherm.Designer.cs">
       <DependentUpon>frmInlogScherm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKlanten.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKlanten.Designer.cs">
+      <DependentUpon>FrmKlanten.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gebruikers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

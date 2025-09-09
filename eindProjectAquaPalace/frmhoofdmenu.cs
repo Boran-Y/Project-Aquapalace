@@ -24,5 +24,12 @@ namespace eindProjectAquaPalace
                 frmhoofdmenu.ActiveForm.Hide();
             }
         }
+
+        private void btnKlanten_Click(object sender, EventArgs e)
+        {
+            FrmKlanten klantenForm = new FrmKlanten();
+            klantenForm.Show();
+            this.Hide();
+        }
     }
 }
