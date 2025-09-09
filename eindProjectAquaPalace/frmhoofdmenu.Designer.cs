@@ -62,6 +62,7 @@
             this.btnKlanten.TabIndex = 1;
             this.btnKlanten.Text = "klanten";
             this.btnKlanten.UseVisualStyleBackColor = false;
+            this.btnKlanten.Click += new System.EventHandler(this.btnKlanten_Click);
             // 
             // button3
             // 
