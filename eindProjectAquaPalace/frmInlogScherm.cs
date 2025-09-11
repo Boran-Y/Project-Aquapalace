@@ -48,9 +48,14 @@ namespace eindProjectAquaPalace
             {
                 GebruikersNaam = gebruikersobject.firstname + " " + gebruikersobject.lastname;
 
+<<<<<<< Updated upstream
 
                 frmhoofdmenu hoofdMenuForm = new frmhoofdmenu();
                 hoofdMenuForm.Show();
+=======
+                frmhoofdmenu frmHoofdMenu = new frmhoofdmenu();
+                frmhoofdmenu.Show();
+>>>>>>> Stashed changes
                 this.Hide();
             }
             else
