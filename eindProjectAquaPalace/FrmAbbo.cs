@@ -16,5 +16,10 @@ namespace eindProjectAquaPalace
         {
             InitializeComponent();
         }
+
+        private void FrmAbbo_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
