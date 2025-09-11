@@ -37,5 +37,10 @@ namespace eindProjectAquaPalace
             FrmDashboard dashboardForm = new FrmDashboard();
             dashboardForm.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
