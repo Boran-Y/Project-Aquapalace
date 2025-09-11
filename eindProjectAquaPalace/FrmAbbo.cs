@@ -10,19 +10,11 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
-    public partial class FrmKlanten : Form
+    public partial class FrmAbbo : Form
     {
-        public FrmKlanten()
+        public FrmAbbo()
         {
             InitializeComponent();
-        }
-
-        private void btnTerug_Click(object sender, EventArgs e)
-        {
-            if(frmhoofdmenu.ActiveForm != null)
-            {
-                frmhoofdmenu.ActiveForm.Show();
-            }
         }
     }
 }
