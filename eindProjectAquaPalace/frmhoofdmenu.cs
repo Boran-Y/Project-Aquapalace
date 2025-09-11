@@ -29,12 +29,13 @@ namespace eindProjectAquaPalace
         {
             FrmKlanten klantenForm = new FrmKlanten();
             klantenForm.Show();
-            this.Hide();
+          
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-
+            FrmDashboard dashboardForm = new FrmDashboard();
+            dashboardForm.Show();
         }
     }
 }

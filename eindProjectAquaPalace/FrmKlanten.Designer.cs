@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Aquapalace = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbxNaam = new System.Windows.Forms.ListBox();
-            this.lbxAchternaam = new System.Windows.Forms.ListBox();
-            this.lbxEmail = new System.Windows.Forms.ListBox();
-            this.lbxTel = new System.Windows.Forms.ListBox();
-            this.cbxAbbo = new System.Windows.Forms.ComboBox();
-            this.btnVerzend = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnVerzend = new System.Windows.Forms.Button();
+            this.cbxAbbo = new System.Windows.Forms.ComboBox();
+            this.lbxTel = new System.Windows.Forms.ListBox();
+            this.lbxEmail = new System.Windows.Forms.ListBox();
+            this.lbxAchternaam = new System.Windows.Forms.ListBox();
+            this.lbxNaam = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Aquapalace = new System.Windows.Forms.Label();
             this.btnTerug = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,68 +66,51 @@
             this.panel1.Size = new System.Drawing.Size(394, 534);
             this.panel1.TabIndex = 0;
             // 
-            // Aquapalace
+            // label6
             // 
-            this.Aquapalace.AutoSize = true;
-            this.Aquapalace.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Aquapalace.Location = new System.Drawing.Point(232, 9);
-            this.Aquapalace.Name = "Aquapalace";
-            this.Aquapalace.Size = new System.Drawing.Size(176, 32);
-            this.Aquapalace.TabIndex = 1;
-            this.Aquapalace.Text = "Aquapalace";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(116, 20);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(127, 20);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Klantformulier";
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 60);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(41, 16);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "naam";
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(50, 346);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "type abonnement";
             // 
-            // lbxNaam
+            // label4
             // 
-            this.lbxNaam.FormattingEnabled = true;
-            this.lbxNaam.ItemHeight = 16;
-            this.lbxNaam.Location = new System.Drawing.Point(53, 94);
-            this.lbxNaam.Name = "lbxNaam";
-            this.lbxNaam.Size = new System.Drawing.Size(266, 20);
-            this.lbxNaam.TabIndex = 2;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(50, 278);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 16);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "telefoon";
             // 
-            // lbxAchternaam
+            // label3
             // 
-            this.lbxAchternaam.FormattingEnabled = true;
-            this.lbxAchternaam.ItemHeight = 16;
-            this.lbxAchternaam.Location = new System.Drawing.Point(53, 162);
-            this.lbxAchternaam.Name = "lbxAchternaam";
-            this.lbxAchternaam.Size = new System.Drawing.Size(266, 20);
-            this.lbxAchternaam.TabIndex = 3;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(50, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(40, 16);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "email";
             // 
-            // lbxEmail
+            // label2
             // 
-            this.lbxEmail.FormattingEnabled = true;
-            this.lbxEmail.ItemHeight = 16;
-            this.lbxEmail.Location = new System.Drawing.Point(53, 236);
-            this.lbxEmail.Name = "lbxEmail";
-            this.lbxEmail.Size = new System.Drawing.Size(266, 20);
-            this.lbxEmail.TabIndex = 4;
-            // 
-            // lbxTel
-            // 
-            this.lbxTel.FormattingEnabled = true;
-            this.lbxTel.ItemHeight = 16;
-            this.lbxTel.Location = new System.Drawing.Point(53, 308);
-            this.lbxTel.Name = "lbxTel";
-            this.lbxTel.Size = new System.Drawing.Size(266, 20);
-            this.lbxTel.TabIndex = 5;
-            // 
-            // cbxAbbo
-            // 
-            this.cbxAbbo.FormattingEnabled = true;
-            this.cbxAbbo.Location = new System.Drawing.Point(53, 376);
-            this.cbxAbbo.Name = "cbxAbbo";
-            this.cbxAbbo.Size = new System.Drawing.Size(266, 24);
-            this.cbxAbbo.TabIndex = 6;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(50, 131);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 16);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "achternaam";
             // 
             // btnVerzend
             // 
@@ -139,51 +122,68 @@
             this.btnVerzend.Text = "Verzenden";
             this.btnVerzend.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // cbxAbbo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 131);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "achternaam";
+            this.cbxAbbo.FormattingEnabled = true;
+            this.cbxAbbo.Location = new System.Drawing.Point(53, 376);
+            this.cbxAbbo.Name = "cbxAbbo";
+            this.cbxAbbo.Size = new System.Drawing.Size(266, 24);
+            this.cbxAbbo.TabIndex = 6;
             // 
-            // label3
+            // lbxTel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(50, 206);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 16);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "email";
+            this.lbxTel.FormattingEnabled = true;
+            this.lbxTel.ItemHeight = 16;
+            this.lbxTel.Location = new System.Drawing.Point(53, 308);
+            this.lbxTel.Name = "lbxTel";
+            this.lbxTel.Size = new System.Drawing.Size(266, 20);
+            this.lbxTel.TabIndex = 5;
             // 
-            // label4
+            // lbxEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(50, 278);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 16);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "telefoon";
+            this.lbxEmail.FormattingEnabled = true;
+            this.lbxEmail.ItemHeight = 16;
+            this.lbxEmail.Location = new System.Drawing.Point(53, 236);
+            this.lbxEmail.Name = "lbxEmail";
+            this.lbxEmail.Size = new System.Drawing.Size(266, 20);
+            this.lbxEmail.TabIndex = 4;
             // 
-            // label5
+            // lbxAchternaam
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(50, 346);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 16);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "type abonnement";
+            this.lbxAchternaam.FormattingEnabled = true;
+            this.lbxAchternaam.ItemHeight = 16;
+            this.lbxAchternaam.Location = new System.Drawing.Point(53, 162);
+            this.lbxAchternaam.Name = "lbxAchternaam";
+            this.lbxAchternaam.Size = new System.Drawing.Size(266, 20);
+            this.lbxAchternaam.TabIndex = 3;
             // 
-            // label6
+            // lbxNaam
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(116, 20);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(127, 20);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Klantformulier";
+            this.lbxNaam.FormattingEnabled = true;
+            this.lbxNaam.ItemHeight = 16;
+            this.lbxNaam.Location = new System.Drawing.Point(53, 94);
+            this.lbxNaam.Name = "lbxNaam";
+            this.lbxNaam.Size = new System.Drawing.Size(266, 20);
+            this.lbxNaam.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(50, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 16);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "naam";
+            // 
+            // Aquapalace
+            // 
+            this.Aquapalace.AutoSize = true;
+            this.Aquapalace.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Aquapalace.Location = new System.Drawing.Point(232, 9);
+            this.Aquapalace.Name = "Aquapalace";
+            this.Aquapalace.Size = new System.Drawing.Size(176, 32);
+            this.Aquapalace.TabIndex = 1;
+            this.Aquapalace.Text = "Aquapalace";
             // 
             // btnTerug
             // 
@@ -194,6 +194,7 @@
             this.btnTerug.TabIndex = 13;
             this.btnTerug.Text = "Terug";
             this.btnTerug.UseVisualStyleBackColor = false;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
             // 
             // FrmKlanten
             // 
