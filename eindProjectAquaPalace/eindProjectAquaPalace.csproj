@@ -147,6 +147,12 @@
     <Compile Include="FrmKlanten.Designer.cs">
       <DependentUpon>FrmKlanten.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frmklantenoverzicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frmklantenoverzicht.Designer.cs">
+      <DependentUpon>Frmklantenoverzicht.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmUsers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,7 @@
       <DependentUpon>FrmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Gebruikers.cs" />
+    <Compile Include="klantenoverzicht.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="raportages.cs" />
@@ -175,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKlanten.resx">
       <DependentUpon>FrmKlanten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frmklantenoverzicht.resx">
+      <DependentUpon>Frmklantenoverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>

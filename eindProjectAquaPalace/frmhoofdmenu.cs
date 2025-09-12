@@ -27,9 +27,9 @@ namespace eindProjectAquaPalace
 
         private void btnKlanten_Click(object sender, EventArgs e)
         {
-            FrmKlanten klantenForm = new FrmKlanten();
+            Frmklantenoverzicht klantenForm = new Frmklantenoverzicht();
             klantenForm.Show();
-          
+            this.Hide();
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
