@@ -48,8 +48,26 @@ namespace eindProjectAquaPalace
             {
                 GebruikersNaam = gebruikersobject.firstname + " " + gebruikersobject.lastname;
 
-                frmhoofdmenu hoofdMenuForm = new frmhoofdmenu();
-                hoofdMenuForm.Show();
+                // Verschillende forms openen op basis van rol
+                switch (gebruikersobject.role?.ToLower())
+                {
+                    case "beheerder":
+                        frmBeheerderMenu beheerderMenuForm = new frmBeheerderMenu();
+                        beheerderMenuForm.Show();
+                        break;
+                    case "medewerker":
+                        frmhoofdmenu hoofdMenuForm = new frmhoofdmenu();
+                        hoofdMenuForm.Show();
+                        break;
+                    case "gast":
+                    case "klant":
+                        FrmKlanten klantenForm = new FrmKlanten();
+                        klantenForm.Show();
+                        break;
+                    default:
+                        MessageBox.Show("Onbekende rol, neem contact op met de beheerder.");
+                        return;
+                }
                 this.Hide();
             }
             else

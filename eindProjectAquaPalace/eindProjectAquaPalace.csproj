@@ -111,11 +111,23 @@
     <Compile Include="FrmAbbo.Designer.cs">
       <DependentUpon>FrmAbbo.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBeheerderMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBeheerderMenu.Designer.cs">
+      <DependentUpon>FrmBeheerderMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmDashboard.Designer.cs">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGechiedenis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGechiedenis.Designer.cs">
+      <DependentUpon>FrmGechiedenis.cs</DependentUpon>
     </Compile>
     <Compile Include="frmhoofdmenu.cs">
       <SubType>Form</SubType>
@@ -135,6 +147,12 @@
     <Compile Include="FrmKlanten.Designer.cs">
       <DependentUpon>FrmKlanten.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsers.Designer.cs">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gebruikers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -142,6 +160,9 @@
     <Compile Include="transacties.cs" />
     <EmbeddedResource Include="FrmAbbo.resx">
       <DependentUpon>FrmAbbo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBeheerderMenu.resx">
+      <DependentUpon>FrmBeheerderMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
@@ -154,6 +175,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKlanten.resx">
       <DependentUpon>FrmKlanten.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmUsers.resx">
+      <DependentUpon>FrmUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

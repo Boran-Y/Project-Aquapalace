@@ -8,21 +8,23 @@ using Mysqlx.Expr;
 
 namespace eindProjectAquaPalace
 {
-     class Abonnement
+    class Abonnement
     {
-        public int Id;
-        public int CustomerId;
-        public int TypeId;
-        public DateTime Aankoopdatum;
-        public DateTime vervaldatum;
-        public string OverigeInfo;
-        public string Actief;
+        public int AbonnementId;
+        public int KlantId;
+        public string TypeAbonnement;
+        public DateTime Startdatum;
+        public DateTime Einddatum;
+        public int SaldoRitten;
+        public string Status;
+        public bool Verlengbaar;
+        public DateTime Aanmaakdatum;
+        public DateTime LaatsteWijziging;
 
         public override string ToString()
         {
-            return $"{this.Id}  {this.CustomerId}  {this.TypeId}  {this.Aankoopdatum}  {this.vervaldatum}  {this.OverigeInfo}  {this.Actief}";
+            return $"{AbonnementId} {KlantId} {TypeAbonnement} {Startdatum} {Einddatum} {SaldoRitten} {Status} {Verlengbaar} {Aanmaakdatum} {LaatsteWijziging}";
         }
-
 
         public static List<Abonnement> getAbonnementen()
         {
@@ -36,13 +38,16 @@ namespace eindProjectAquaPalace
             while (reader.Read())
             {
                 Abonnement abonnementobject = new Abonnement();
-                abonnementobject.Id = Convert.ToInt32((reader["id"]));
-                abonnementobject.CustomerId = Convert.ToInt32((reader["klant_id"]));
-                abonnementobject.TypeId = Convert.ToInt32((reader["abonnement_type_id"]));
-                abonnementobject.Aankoopdatum = Convert.ToDateTime((reader["aankoop_datum"]));
-                abonnementobject.vervaldatum = Convert.ToDateTime((reader["verval_datum"]));
-                abonnementobject.OverigeInfo = Convert.ToString(reader["aantal_overige_ritten"]);
-                abonnementobject.Actief = Convert.ToString(reader["actief"]);
+                abonnementobject.AbonnementId = Convert.ToInt32(reader["abonnement_id"]);
+                abonnementobject.KlantId = Convert.ToInt32(reader["klant_id"]);
+                abonnementobject.TypeAbonnement = Convert.ToString(reader["type_abonnement"]);
+                abonnementobject.Startdatum = Convert.ToDateTime(reader["startdatum"]);
+                abonnementobject.Einddatum = Convert.ToDateTime(reader["einddatum"]);
+                abonnementobject.SaldoRitten = Convert.ToInt32(reader["saldo_ritten"]);
+                abonnementobject.Status = Convert.ToString(reader["status"]);
+                abonnementobject.Verlengbaar = Convert.ToBoolean(reader["verlengbaar"]);
+                abonnementobject.Aanmaakdatum = Convert.ToDateTime(reader["aanmaakdatum"]);
+                abonnementobject.LaatsteWijziging = Convert.ToDateTime(reader["laatste_wijziging"]);
                 abonnementlist.Add(abonnementobject);
             }
             con.Close();
@@ -67,18 +72,20 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"INSERT INTO `abonnementen` (`klant_id`, `abonnement_type_id`, `aankoop_datum`, `verval_datum`, `aantal_overige_ritten`, `actief`) 
-                                      VALUES (@klant_id, @abonnement_type_id, @aankoop_datum, @verval_datum, @aantal_overige_ritten, @actief);";
-            myCommand.Parameters.AddWithValue("@klant_id", this.CustomerId);
-            myCommand.Parameters.AddWithValue("@abonnement_type_id", this.TypeId);
-            myCommand.Parameters.AddWithValue("@aankoop_datum", this.Aankoopdatum);
-            myCommand.Parameters.AddWithValue("@verval_datum", this.vervaldatum);
-            myCommand.Parameters.AddWithValue("@aantal_overige_ritten", this.OverigeInfo);
-            myCommand.Parameters.AddWithValue("@actief", this.Actief);
+            myCommand.CommandText = @"INSERT INTO abonnementen 
+                (klant_id, type_abonnement, startdatum, einddatum, saldo_ritten, status, verlengbaar, aanmaakdatum, laatste_wijziging) 
+                VALUES (@klant_id, @type_abonnement, @startdatum, @einddatum, @saldo_ritten, @status, @verlengbaar, @aanmaakdatum, @laatste_wijziging);";
+            myCommand.Parameters.AddWithValue("@klant_id", this.KlantId);
+            myCommand.Parameters.AddWithValue("@type_abonnement", this.TypeAbonnement);
+            myCommand.Parameters.AddWithValue("@startdatum", this.Startdatum);
+            myCommand.Parameters.AddWithValue("@einddatum", this.Einddatum);
+            myCommand.Parameters.AddWithValue("@saldo_ritten", this.SaldoRitten);
+            myCommand.Parameters.AddWithValue("@status", this.Status);
+            myCommand.Parameters.AddWithValue("@verlengbaar", this.Verlengbaar);
+            myCommand.Parameters.AddWithValue("@aanmaakdatum", this.Aanmaakdatum);
+            myCommand.Parameters.AddWithValue("@laatste_wijziging", this.LaatsteWijziging);
             myCommand.ExecuteNonQuery();
             con.Close();
-
-
         }
 
         public void EditAbbo()
@@ -87,42 +94,30 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"UPDATE `abonnementen` 
-                                      SET `klant_id` = @klant_id, 
-                                          `abonnement_type_id` = @abonnement_type_id, 
-                                          `aankoop_datum` = @aankoop_datum, 
-                                          `verval_datum` = @verval_datum, 
-                                          `aantal_overige_ritten` = @aantal_overige_ritten, 
-                                          `actief` = @actief 
-                                      WHERE `id` = @id;";
-            myCommand.Parameters.AddWithValue("@id", this.Id);
-            myCommand.Parameters.AddWithValue("@klant_id", this.CustomerId);
-            myCommand.Parameters.AddWithValue("@abonnement_type_id", this.TypeId);
-            // Voorbeeld: nieuw abonnement koppelen aan klant met ID 5
-            Abonnement nieuwAbbo = new Abonnement
-            {
-                CustomerId = 5,
-                TypeId = 2, // bijvoorbeeld type 2
-                Aankoopdatum = DateTime.Now,
-                vervaldatum = DateTime.Now.AddMonths(1),
-                OverigeInfo = "Geen",
-                Actief = "ja"
-            };
-            nieuwAbbo.AddAbbo();
-            bool status = Abonnement.IsAbonnementActief(10); // Abonnement met ID 10
-            if (status)
-                Console.WriteLine("Abonnement is actief.");
-            else
-                Console.WriteLine("Abonnement is niet actief.");
-            myCommand.Parameters.AddWithValue("@aankoop_datum", this.Aankoopdatum);
-            myCommand.Parameters.AddWithValue("@verval_datum", this.vervaldatum);
-            myCommand.Parameters.AddWithValue("@aantal_overige_ritten", this.OverigeInfo);
-            myCommand.Parameters.AddWithValue("@actief", this.Actief);
+            myCommand.CommandText = @"UPDATE abonnementen 
+                SET klant_id = @klant_id, 
+                    type_abonnement = @type_abonnement, 
+                    startdatum = @startdatum, 
+                    einddatum = @einddatum, 
+                    saldo_ritten = @saldo_ritten, 
+                    status = @status, 
+                    verlengbaar = @verlengbaar, 
+                    aanmaakdatum = @aanmaakdatum, 
+                    laatste_wijziging = @laatste_wijziging 
+                WHERE abonnement_id = @abonnement_id;";
+            myCommand.Parameters.AddWithValue("@abonnement_id", this.AbonnementId);
+            myCommand.Parameters.AddWithValue("@klant_id", this.KlantId);
+            myCommand.Parameters.AddWithValue("@type_abonnement", this.TypeAbonnement);
+            myCommand.Parameters.AddWithValue("@startdatum", this.Startdatum);
+            myCommand.Parameters.AddWithValue("@einddatum", this.Einddatum);
+            myCommand.Parameters.AddWithValue("@saldo_ritten", this.SaldoRitten);
+            myCommand.Parameters.AddWithValue("@status", this.Status);
+            myCommand.Parameters.AddWithValue("@verlengbaar", this.Verlengbaar);
+            myCommand.Parameters.AddWithValue("@aanmaakdatum", this.Aanmaakdatum);
+            myCommand.Parameters.AddWithValue("@laatste_wijziging", this.LaatsteWijziging);
             myCommand.ExecuteNonQuery();
             con.Close();
-
         }
-
 
         public void DeleteAbbo()
         {
@@ -130,11 +125,12 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"DELETE FROM `abonnementen` WHERE `id` = @id;";
-            myCommand.Parameters.AddWithValue("@id", this.Id);
+            myCommand.CommandText = @"DELETE FROM abonnementen WHERE abonnement_id = @abonnement_id;";
+            myCommand.Parameters.AddWithValue("@abonnement_id", this.AbonnementId);
             myCommand.ExecuteNonQuery();
             con.Close();
         }
+
         public static bool IsAbonnementActief(int abonnementId)
         {
             bool actief = false;
@@ -142,14 +138,13 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"SELECT actief FROM abonnementen WHERE id = @id;";
-            myCommand.Parameters.AddWithValue("@id", abonnementId);
+            myCommand.CommandText = @"SELECT status FROM abonnementen WHERE abonnement_id = @abonnement_id;";
+            myCommand.Parameters.AddWithValue("@abonnement_id", abonnementId);
             var result = myCommand.ExecuteScalar();
-            if (result != null && result.ToString().ToLower() == "ja")
+            if (result != null && result.ToString().ToLower() == "actief")
                 actief = true;
             con.Close();
             return actief;
         }
-
     }
 }

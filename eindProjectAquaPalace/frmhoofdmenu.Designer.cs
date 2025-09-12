@@ -30,13 +30,14 @@
         {
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnKlanten = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnAbbo = new System.Windows.Forms.Button();
             this.btnGeschiedenis = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTerug = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnGebruikers = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -65,17 +66,17 @@
             this.btnKlanten.UseVisualStyleBackColor = false;
             this.btnKlanten.Click += new System.EventHandler(this.btnKlanten_Click);
             // 
-            // button3
+            // btnAbbo
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(42, 193);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(218, 46);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "abonnementen";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnAbbo.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAbbo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbbo.Location = new System.Drawing.Point(42, 193);
+            this.btnAbbo.Name = "btnAbbo";
+            this.btnAbbo.Size = new System.Drawing.Size(218, 46);
+            this.btnAbbo.TabIndex = 2;
+            this.btnAbbo.Text = "abonnementen";
+            this.btnAbbo.UseVisualStyleBackColor = false;
+            this.btnAbbo.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnGeschiedenis
             // 
@@ -91,11 +92,12 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.btnGebruikers);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.btnGeschiedenis);
             this.panel1.Controls.Add(this.btnKlanten);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btnAbbo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 521);
@@ -121,6 +123,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(612, 521);
             this.panel2.TabIndex = 5;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // btnTerug
             // 
@@ -144,6 +147,17 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welkom bij het Hoofdmenu";
             // 
+            // btnGebruikers
+            // 
+            this.btnGebruikers.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGebruikers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGebruikers.Location = new System.Drawing.Point(42, 453);
+            this.btnGebruikers.Name = "btnGebruikers";
+            this.btnGebruikers.Size = new System.Drawing.Size(218, 46);
+            this.btnGebruikers.TabIndex = 5;
+            this.btnGebruikers.Text = "gebruikers";
+            this.btnGebruikers.UseVisualStyleBackColor = false;
+            // 
             // frmhoofdmenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -153,6 +167,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "frmhoofdmenu";
             this.Text = "Form2";
+            this.Load += new System.EventHandler(this.frmhoofdmenu_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -164,12 +179,13 @@
 
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnKlanten;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnAbbo;
         private System.Windows.Forms.Button btnGeschiedenis;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTerug;
+        private System.Windows.Forms.Button btnGebruikers;
     }
 }
