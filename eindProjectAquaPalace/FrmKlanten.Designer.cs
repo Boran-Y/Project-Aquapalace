@@ -207,6 +207,7 @@
             this.Controls.Add(this.Aquapalace);
             this.Controls.Add(this.panel1);
             this.Name = "FrmKlanten";
+            this.Load += new System.EventHandler(this.FrmKlanten_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
