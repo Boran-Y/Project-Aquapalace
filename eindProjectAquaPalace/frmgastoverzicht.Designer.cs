@@ -1,6 +1,6 @@
 ﻿namespace eindProjectAquaPalace
 {
-    partial class FrmDashboard
+    partial class Frmgastoverzicht
     {
         /// <summary>
         /// Required designer variable.
@@ -22,28 +22,24 @@
 
         #region Windows Form Designer generated code
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
-            this.lbxAbonementAantal = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.AbboBeheer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
-            this.btnKlantToevoegen = new System.Windows.Forms.Button();
+            this.oudeabonnementenlbx = new System.Windows.Forms.ListBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.abonomenttoevegoenbtn = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.abonomentenlbx = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -80,42 +76,23 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "Dashboard";
             // 
-            // lbxAbonementAantal
-            // 
-            this.lbxAbonementAantal.FormattingEnabled = true;
-            this.lbxAbonementAantal.ItemHeight = 16;
-            this.lbxAbonementAantal.Location = new System.Drawing.Point(41, 102);
-            this.lbxAbonementAantal.Name = "lbxAbonementAantal";
-            this.lbxAbonementAantal.Size = new System.Drawing.Size(916, 228);
-            this.lbxAbonementAantal.TabIndex = 1;
-            this.lbxAbonementAantal.SelectedIndexChanged += new System.EventHandler(this.lbxAbonementAantal_SelectedIndexChanged);
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel2.Controls.Add(this.abonomentenlbx);
+            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.abonomenttoevegoenbtn);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Controls.Add(this.AbboBeheer);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.listBox3);
-            this.panel2.Controls.Add(this.btnKlantToevoegen);
+            this.panel2.Controls.Add(this.oudeabonnementenlbx);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.lbxAbonementAantal);
             this.panel2.Location = new System.Drawing.Point(191, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1037, 643);
             this.panel2.TabIndex = 2;
-            // 
-            // AbboBeheer
-            // 
-            this.AbboBeheer.Location = new System.Drawing.Point(15, 489);
-            this.AbboBeheer.Name = "AbboBeheer";
-            this.AbboBeheer.Size = new System.Drawing.Size(323, 63);
-            this.AbboBeheer.TabIndex = 14;
-            this.AbboBeheer.Text = "Geselecteerd abonnement beheren";
-            this.AbboBeheer.UseVisualStyleBackColor = true;
             // 
             // label6
             // 
@@ -123,9 +100,9 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(523, 400);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(228, 20);
+            this.label6.Size = new System.Drawing.Size(180, 20);
             this.label6.TabIndex = 12;
-            this.label6.Text = "Abonnement geschiedenis";
+            this.label6.Text = "Oude abonnementen";
             // 
             // label5
             // 
@@ -136,32 +113,22 @@
             this.label5.Size = new System.Drawing.Size(0, 20);
             this.label5.TabIndex = 11;
             // 
-            // listBox3
+            // oudeabonnementenlbx
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(515, 440);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(250, 180);
-            this.listBox3.TabIndex = 10;
-            // 
-            // btnKlantToevoegen
-            // 
-            this.btnKlantToevoegen.Location = new System.Drawing.Point(15, 411);
-            this.btnKlantToevoegen.Name = "btnKlantToevoegen";
-            this.btnKlantToevoegen.Size = new System.Drawing.Size(323, 63);
-            this.btnKlantToevoegen.TabIndex = 8;
-            this.btnKlantToevoegen.Text = "Abonnement verlengen";
-            this.btnKlantToevoegen.UseVisualStyleBackColor = true;
-            this.btnKlantToevoegen.Click += new System.EventHandler(this.btnKlantToevoegen_Click);
+            this.oudeabonnementenlbx.FormattingEnabled = true;
+            this.oudeabonnementenlbx.ItemHeight = 16;
+            this.oudeabonnementenlbx.Location = new System.Drawing.Point(515, 440);
+            this.oudeabonnementenlbx.Name = "oudeabonnementenlbx";
+            this.oudeabonnementenlbx.Size = new System.Drawing.Size(250, 180);
+            this.oudeabonnementenlbx.TabIndex = 10;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SteelBlue;
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(0, 336);
+            this.panel4.Location = new System.Drawing.Point(3, 336);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1028, 43);
+            this.panel4.Size = new System.Drawing.Size(1025, 43);
             this.panel4.TabIndex = 7;
             // 
             // label4
@@ -197,7 +164,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(421, 63);
+            this.label1.Location = new System.Drawing.Point(37, 64);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 2;
@@ -205,21 +172,48 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(791, 546);
+            this.button2.Location = new System.Drawing.Point(818, 489);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 64);
+            this.button2.Size = new System.Drawing.Size(152, 100);
             this.button2.TabIndex = 15;
-            this.button2.Text = "Code registreren";
+            this.button2.Text = "code registreren";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // FrmDashboard
+            // abonomenttoevegoenbtn
+            // 
+            this.abonomenttoevegoenbtn.Location = new System.Drawing.Point(72, 431);
+            this.abonomenttoevegoenbtn.Name = "abonomenttoevegoenbtn";
+            this.abonomenttoevegoenbtn.Size = new System.Drawing.Size(323, 63);
+            this.abonomenttoevegoenbtn.TabIndex = 16;
+            this.abonomenttoevegoenbtn.Text = "Abonnement toevoegen";
+            this.abonomenttoevegoenbtn.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(72, 526);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(323, 63);
+            this.button4.TabIndex = 17;
+            this.button4.Text = "Geselecteerd abonnement wijzegen";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // abonomentenlbx
+            // 
+            this.abonomentenlbx.FormattingEnabled = true;
+            this.abonomentenlbx.ItemHeight = 16;
+            this.abonomentenlbx.Location = new System.Drawing.Point(41, 102);
+            this.abonomentenlbx.Name = "abonomentenlbx";
+            this.abonomentenlbx.Size = new System.Drawing.Size(855, 228);
+            this.abonomentenlbx.TabIndex = 18;
+            // 
+            // Frmgastoverzicht
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1216, 634);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "FrmDashboard";
+            this.Name = "Frmgastoverzicht";
             this.Text = "FrmDashboard";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -236,9 +230,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListBox lbxAbonementAantal;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnKlantToevoegen;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
@@ -246,10 +238,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox oudeabonnementenlbx;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button AbboBeheer;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button abonomenttoevegoenbtn;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ListBox abonomentenlbx;
     }
 }
