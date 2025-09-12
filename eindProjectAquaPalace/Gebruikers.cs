@@ -25,7 +25,7 @@ class Gebruikers
         con.Open();
         MySqlCommand myCommand = new MySqlCommand();
         myCommand.Connection = con;
-        myCommand.CommandText = @"SELECT * FROM users WHERE gebruikersnaam = @gebruikersnaam";
+        myCommand.CommandText = @"SELECT * FROM gebruikers WHERE gebruikersnaam = @gebruikersnaam";
         myCommand.Parameters.AddWithValue("@gebruikersnaam", gebruikersnaam);
         MySqlDataReader reader = myCommand.ExecuteReader();
         while (reader.Read())
