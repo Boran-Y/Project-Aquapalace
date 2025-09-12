@@ -46,21 +46,21 @@ namespace eindProjectAquaPalace
 
             if (gebruikersobject != null)
             {
-                GebruikersNaam = gebruikersobject.firstname + " " + gebruikersobject.lastname;
+                // Gebruik de juiste properties uit Gebruikers
+                GebruikersNaam = gebruikersobject.Gebruikersnaam;
 
-                // Verschillende forms openen op basis van rol
-                switch (gebruikersobject.role?.ToLower())
+                // Controleer de rol via enum
+                switch (gebruikersobject.Rol)
                 {
-                    case "beheerder":
-                        frmBeheerderMenu beheerderMenuForm = new frmBeheerderMenu();
+                    case GebruikersRol.Beheerder:
+                        FrmBeheerderMenu beheerderMenuForm = new FrmBeheerderMenu();
                         beheerderMenuForm.Show();
                         break;
-                    case "medewerker":
+                    case GebruikersRol.Medewerker:
                         frmhoofdmenu hoofdMenuForm = new frmhoofdmenu();
                         hoofdMenuForm.Show();
                         break;
-                    case "gast":
-                    case "klant":
+                    case GebruikersRol.Klant:
                         FrmKlanten klantenForm = new FrmKlanten();
                         klantenForm.Show();
                         break;
