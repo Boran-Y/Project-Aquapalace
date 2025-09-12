@@ -36,10 +36,12 @@ namespace eindProjectAquaPalace
         {
             FrmDashboard dashboardForm = new FrmDashboard();
             dashboardForm.Show();
+            this.Hide();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+<<<<<<< Updated upstream
             FrmAbbo abboForm = new FrmAbbo();
             abboForm.Show();
         }
@@ -52,6 +54,11 @@ namespace eindProjectAquaPalace
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+=======
+            FrmAbbo AbboForm = new FrmAbbo();
+            AbboForm.Show();
+            this.Hide();
+>>>>>>> Stashed changes
         }
     }
 }
