@@ -28,7 +28,7 @@ namespace eindProjectAquaPalace
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string hashedpassword = BCrypt.Net.BCrypt.HashPassword("hash123");
+            string hashedpassword = BCrypt.Net.BCrypt.HashPassword("beheerder");
             return;
             //met deze functie kan je van wachtworden een bcrypt maken 
         }

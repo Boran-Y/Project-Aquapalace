@@ -30,5 +30,10 @@ namespace eindProjectAquaPalace
         {
 
         }
+
+        private void FrmKlanten_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

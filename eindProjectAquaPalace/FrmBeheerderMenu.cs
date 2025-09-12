@@ -19,7 +19,9 @@ namespace eindProjectAquaPalace
 
         private void btnGebruikers_Click(object sender, EventArgs e)
         {
-
+            FrmUsers usersForm = new FrmUsers();
+            usersForm.Show();
+            this.Hide();
         }
 
         private void btnKlanten_Click(object sender, EventArgs e)
