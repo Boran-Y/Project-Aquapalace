@@ -19,11 +19,9 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            if (frmhoofdmenu.ActiveForm != null)
-            {
-                frmhoofdmenu.ActiveForm.Show();
-            }
-            this.Close();
+            frmhoofdmenu klantenForm = new frmhoofdmenu();
+            klantenForm.Show();
+            this.Hide();
         }
 
         private void cbxAbbo_SelectedIndexChanged(object sender, EventArgs e)
