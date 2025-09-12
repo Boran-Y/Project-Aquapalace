@@ -25,5 +25,10 @@ namespace eindProjectAquaPalace
             }
             this.Close();
         }
+
+        private void cbxAbbo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

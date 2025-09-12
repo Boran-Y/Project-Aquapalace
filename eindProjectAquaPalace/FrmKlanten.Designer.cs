@@ -129,6 +129,7 @@
             this.cbxAbbo.Name = "cbxAbbo";
             this.cbxAbbo.Size = new System.Drawing.Size(266, 24);
             this.cbxAbbo.TabIndex = 6;
+            this.cbxAbbo.SelectedIndexChanged += new System.EventHandler(this.cbxAbbo_SelectedIndexChanged);
             // 
             // lbxTel
             // 

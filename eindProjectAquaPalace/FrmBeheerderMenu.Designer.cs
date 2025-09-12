@@ -120,6 +120,7 @@
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnGeschiedenis
             // 
@@ -142,6 +143,7 @@
             this.btnKlanten.TabIndex = 1;
             this.btnKlanten.Text = "klanten";
             this.btnKlanten.UseVisualStyleBackColor = false;
+            this.btnKlanten.Click += new System.EventHandler(this.btnKlanten_Click);
             // 
             // btnAbbo
             // 
@@ -153,6 +155,7 @@
             this.btnAbbo.TabIndex = 2;
             this.btnAbbo.Text = "abonnementen";
             this.btnAbbo.UseVisualStyleBackColor = false;
+            this.btnAbbo.Click += new System.EventHandler(this.btnAbbo_Click);
             // 
             // FrmBeheerderMenu
             // 
