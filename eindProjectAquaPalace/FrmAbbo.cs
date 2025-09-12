@@ -12,9 +12,16 @@ namespace eindProjectAquaPalace
 {
     public partial class FrmAbbo : Form
     {
+        private FrmDashboard frmDashboard;
+
         public FrmAbbo()
         {
             InitializeComponent();
+        }
+
+        public FrmAbbo(FrmDashboard frmDashboard)
+        {
+            this.frmDashboard = frmDashboard;
         }
 
         private void FrmAbbo_Load(object sender, EventArgs e)

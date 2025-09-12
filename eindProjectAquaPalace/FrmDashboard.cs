@@ -31,6 +31,19 @@ namespace eindProjectAquaPalace
         {
             FrmKlanten Klantenform = new FrmKlanten();
             Klantenform.Show();
+            this.Hide();
+        }
+
+        private void AbboBeheer_Click(object sender, EventArgs e)
+        {
+            FrmAbbo frmAbbo = new FrmAbbo();
+            frmAbbo.Show();
+            this.Close();
+        }
+
+        private void lbxAbonementAantal_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
