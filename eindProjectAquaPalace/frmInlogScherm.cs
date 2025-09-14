@@ -61,14 +61,14 @@ namespace eindProjectAquaPalace
                         hoofdMenuForm.Show();
                         break;
                     case GebruikersRol.Klant:
-                        FrmKlanten klantenForm = new FrmKlanten();
+                        FrmKlantenMenu klantenForm = new FrmKlantenMenu();
                         klantenForm.Show();
                         break;
                     default:
                         MessageBox.Show("Onbekende rol, neem contact op met de beheerder.");
                         return;
                 }
-                this.Hide();
+             
             }
             else
             {

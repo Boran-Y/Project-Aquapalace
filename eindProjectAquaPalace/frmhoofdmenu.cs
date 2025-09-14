@@ -59,5 +59,11 @@ namespace eindProjectAquaPalace
             this.Hide();
 
         }
+
+        private void btnGeschiedenis_Click(object sender, EventArgs e)
+        {
+            FrmGechiedenis geschiedenisForm = new FrmGechiedenis();
+            geschiedenisForm.Show();
+        }
     }
 }

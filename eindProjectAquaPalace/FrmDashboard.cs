@@ -45,5 +45,39 @@ namespace eindProjectAquaPalace
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmDashboard_Load(object sender, EventArgs e)
+        {
+            lbxAbonementAantal.Items.Clear();
+            foreach (var abonnementObject in Abonnement.getAbonnementen())
+            {
+                lbxAbonementAantal.Items.Add(abonnementObject);
+            }
+
+            lbxAbonementVerlopen.Items.Clear();
+            foreach (var abonnementObject in Abonnement.VerlopenAbonnementen())
+            {
+                lbxAbonementVerlopen.Items.Add(abonnementObject);
+            }
+
+            lbxIncheck.Items.Clear();
+            foreach (var geschiedenis in Geschiedenis.incheckDatum())
+            {
+                lbxIncheck.Items.Add(geschiedenis);
+            }
+
+        }
+
+        private void AbboBeheer_Click_1(object sender, EventArgs e)
+        {
+            FrmAbbo frmAbbo = new FrmAbbo();
+            frmAbbo.Show();
+
+        }
     }
 }
