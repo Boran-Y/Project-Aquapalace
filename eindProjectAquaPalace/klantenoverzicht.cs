@@ -21,7 +21,7 @@ namespace klantenoverzicht
                 MySqlConnection con = Database.start();
                 con.Open();
 
-                string sql = "SELECT * FROM customers;"; // tabelnaam aannemen: klanten
+                string sql = "SELECT * FROM klanten;"; // tabelnaam aannemen: klanten
                 MySqlCommand cmd = new MySqlCommand(sql, con);
                 MySqlDataReader reader = cmd.ExecuteReader();
 

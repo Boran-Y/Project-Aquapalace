@@ -19,9 +19,9 @@ namespace eindProjectAquaPalace
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (frmhoofdmenu.ActiveForm != null)
+            if (frmMedewerkerMenu.ActiveForm != null)
             {
-                frmhoofdmenu.ActiveForm.Show();
+                frmMedewerkerMenu.ActiveForm.Show();
             }
             this.Close();
 

@@ -50,7 +50,7 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            frmhoofdmenu hoofdmenu = new frmhoofdmenu();
+            frmMedewerkerMenu hoofdmenu = new frmMedewerkerMenu();
             hoofdmenu.Show();
         }
     }

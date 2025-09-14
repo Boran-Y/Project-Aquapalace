@@ -19,7 +19,7 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            frmhoofdmenu klantenForm = new frmhoofdmenu();
+            frmMedewerkerMenu klantenForm = new frmMedewerkerMenu();
             klantenForm.Show();
             this.Hide();
         }

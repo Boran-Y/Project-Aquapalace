@@ -57,8 +57,8 @@ namespace eindProjectAquaPalace
                         beheerderMenuForm.Show();
                         break;
                     case GebruikersRol.Medewerker:
-                        frmhoofdmenu hoofdMenuForm = new frmhoofdmenu();
-                        hoofdMenuForm.Show();
+                        frmMedewerkerMenu medewerkerMenu = new frmMedewerkerMenu();
+                        medewerkerMenu.Show();
                         break;
                     case GebruikersRol.Klant:
                         FrmKlantenMenu klantenForm = new FrmKlantenMenu();

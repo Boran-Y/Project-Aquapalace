@@ -1,6 +1,6 @@
 ﻿namespace eindProjectAquaPalace
 {
-    partial class frmhoofdmenu
+    partial class frmMedewerkerMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -99,6 +99,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 521);
             this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -133,14 +134,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welkom bij het Hoofdmenu";
             // 
-            // frmhoofdmenu
+            // frmMedewerkerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 522);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmhoofdmenu";
+            this.Name = "frmMedewerkerMenu";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.frmhoofdmenu_Load);
             this.panel1.ResumeLayout(false);

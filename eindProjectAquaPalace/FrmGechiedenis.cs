@@ -28,9 +28,9 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            if(frmhoofdmenu.ActiveForm != null)
+            if(frmMedewerkerMenu.ActiveForm != null)
             {
-                frmhoofdmenu.ActiveForm.Close();
+                frmMedewerkerMenu.ActiveForm.Close();
             }
         }
     }

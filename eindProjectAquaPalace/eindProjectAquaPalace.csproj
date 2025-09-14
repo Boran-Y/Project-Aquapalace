@@ -129,11 +129,11 @@
     <Compile Include="FrmGechiedenis.Designer.cs">
       <DependentUpon>FrmGechiedenis.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmhoofdmenu.cs">
+    <Compile Include="frmMedewerkerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmhoofdmenu.Designer.cs">
-      <DependentUpon>frmhoofdmenu.cs</DependentUpon>
+    <Compile Include="frmMedewerkerMenu.Designer.cs">
+      <DependentUpon>frmMedewerkerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInlogScherm.cs">
       <SubType>Form</SubType>
@@ -190,8 +190,8 @@
     <EmbeddedResource Include="FrmGechiedenis.resx">
       <DependentUpon>FrmGechiedenis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmhoofdmenu.resx">
-      <DependentUpon>frmhoofdmenu.cs</DependentUpon>
+    <EmbeddedResource Include="frmMedewerkerMenu.resx">
+      <DependentUpon>frmMedewerkerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInlogScherm.resx">
       <DependentUpon>frmInlogScherm.cs</DependentUpon>
