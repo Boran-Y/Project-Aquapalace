@@ -160,6 +160,7 @@
       <DependentUpon>FrmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Gebruikers.cs" />
+    <Compile Include="Geschiedenis.cs" />
     <Compile Include="klantenoverzicht.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -173,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGechiedenis.resx">
+      <DependentUpon>FrmGechiedenis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmhoofdmenu.resx">
       <DependentUpon>frmhoofdmenu.cs</DependentUpon>

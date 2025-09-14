@@ -16,5 +16,22 @@ namespace eindProjectAquaPalace
         {
             InitializeComponent();
         }
+
+        private void btnOverzicht_Click(object sender, EventArgs e)
+        {
+            lbxOverzicht.Items.Clear();
+            foreach (Geschiedenis gechiedenis in Geschiedenis.GetAlleGeschiedenis())
+            {
+                lbxOverzicht.Items.Add(gechiedenis);
+            }
+        }
+
+        private void btnTerug_Click(object sender, EventArgs e)
+        {
+            if(frmhoofdmenu.ActiveForm != null)
+            {
+                frmhoofdmenu.ActiveForm.Close();
+            }
+        }
     }
 }

@@ -132,6 +132,7 @@
             this.btnGeschiedenis.TabIndex = 3;
             this.btnGeschiedenis.Text = "geschiedenis";
             this.btnGeschiedenis.UseVisualStyleBackColor = false;
+            this.btnGeschiedenis.Click += new System.EventHandler(this.btnGeschiedenis_Click);
             // 
             // btnKlanten
             // 

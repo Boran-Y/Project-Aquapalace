@@ -45,6 +45,7 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnTerug = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +97,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.Controls.Add(this.btnTerug);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 4);
             this.panel1.Name = "panel1";
@@ -195,6 +197,17 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnTerug
+            // 
+            this.btnTerug.BackColor = System.Drawing.Color.Transparent;
+            this.btnTerug.Location = new System.Drawing.Point(794, 10);
+            this.btnTerug.Name = "btnTerug";
+            this.btnTerug.Size = new System.Drawing.Size(131, 39);
+            this.btnTerug.TabIndex = 1;
+            this.btnTerug.Text = "terug";
+            this.btnTerug.UseVisualStyleBackColor = false;
+            this.btnTerug.Click += new System.EventHandler(this.btnTerug_Click);
+            // 
             // FrmUsers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -245,5 +258,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnTerug;
     }
 }

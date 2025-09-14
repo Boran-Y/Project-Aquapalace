@@ -108,5 +108,10 @@ namespace eindProjectAquaPalace
             txtRol.Clear();
             txtGekoppeld.Clear();
         }
+
+        private void btnTerug_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
