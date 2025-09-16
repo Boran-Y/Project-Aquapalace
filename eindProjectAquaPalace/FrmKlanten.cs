@@ -45,8 +45,7 @@ namespace eindProjectAquaPalace
             DateTime geboortedatum = DateTime.Parse(txtGeboorte.Text);
             string accountstatus = txtActief.Text;
 
-            Customers customers
-                = new Customers();
+            Customers customers = new Customers();
             customers.KlantId = klantId;
             customers.Voornaam = voornaam;
             customers.Achternaam = achternaam;
@@ -55,6 +54,7 @@ namespace eindProjectAquaPalace
             customers.Adres = adres;
             customers.Geboortedatum = geboortedatum;
             customers.AccountStatus = accountstatus;
+            customers.Toevoegen();
             MessageBox.Show("Klant toegevoegd");
             // Hier zou je de code toevoegen om het 'customers' object op te slaan in de database
         }
