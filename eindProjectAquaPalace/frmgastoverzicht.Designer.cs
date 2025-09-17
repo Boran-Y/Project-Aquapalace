@@ -126,9 +126,9 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.SteelBlue;
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(3, 336);
+            this.panel4.Location = new System.Drawing.Point(0, 336);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1025, 43);
+            this.panel4.Size = new System.Drawing.Size(1028, 43);
             this.panel4.TabIndex = 7;
             // 
             // label4
@@ -187,6 +187,7 @@
             this.abonomenttoevegoenbtn.TabIndex = 16;
             this.abonomenttoevegoenbtn.Text = "Abonnement toevoegen";
             this.abonomenttoevegoenbtn.UseVisualStyleBackColor = true;
+            this.abonomenttoevegoenbtn.Click += new System.EventHandler(this.abonomenttoevegoenbtn_Click);
             // 
             // button4
             // 
