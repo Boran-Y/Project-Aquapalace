@@ -234,6 +234,7 @@
             this.Controls.Add(this.lbxoverzicht);
             this.Name = "Frmklantenoverzicht";
             this.Text = "Frmklantenoverzicht";
+            this.Load += new System.EventHandler(this.Frmklantenoverzicht_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

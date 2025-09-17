@@ -36,7 +36,7 @@
             this.AbboBeheer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.listBox3 = new System.Windows.Forms.ListBox();
+            this.lbxIncheck = new System.Windows.Forms.ListBox();
             this.btnKlantToevoegen = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
@@ -97,7 +97,7 @@
             this.panel2.Controls.Add(this.AbboBeheer);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.listBox3);
+            this.panel2.Controls.Add(this.lbxIncheck);
             this.panel2.Controls.Add(this.btnKlantToevoegen);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel3);
@@ -105,8 +105,9 @@
             this.panel2.Controls.Add(this.lbxAbonementAantal);
             this.panel2.Location = new System.Drawing.Point(191, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1037, 643);
+            this.panel2.Size = new System.Drawing.Size(996, 643);
             this.panel2.TabIndex = 2;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // AbboBeheer
             // 
@@ -116,6 +117,7 @@
             this.AbboBeheer.TabIndex = 14;
             this.AbboBeheer.Text = "Geselecteerd abonnement beheren";
             this.AbboBeheer.UseVisualStyleBackColor = true;
+            this.AbboBeheer.Click += new System.EventHandler(this.AbboBeheer_Click_1);
             // 
             // label6
             // 
@@ -136,14 +138,14 @@
             this.label5.Size = new System.Drawing.Size(0, 20);
             this.label5.TabIndex = 11;
             // 
-            // listBox3
+            // lbxIncheck
             // 
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 16;
-            this.listBox3.Location = new System.Drawing.Point(515, 440);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.Size = new System.Drawing.Size(250, 180);
-            this.listBox3.TabIndex = 10;
+            this.lbxIncheck.FormattingEnabled = true;
+            this.lbxIncheck.ItemHeight = 16;
+            this.lbxIncheck.Location = new System.Drawing.Point(515, 440);
+            this.lbxIncheck.Name = "lbxIncheck";
+            this.lbxIncheck.Size = new System.Drawing.Size(250, 180);
+            this.lbxIncheck.TabIndex = 10;
             // 
             // btnKlantToevoegen
             // 
@@ -216,11 +218,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1216, 634);
+            this.ClientSize = new System.Drawing.Size(1183, 634);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmDashboard";
             this.Text = "FrmDashboard";
+            this.Load += new System.EventHandler(this.FrmDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -246,7 +249,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ListBox listBox3;
+        private System.Windows.Forms.ListBox lbxIncheck;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button AbboBeheer;

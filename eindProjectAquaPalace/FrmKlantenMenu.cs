@@ -10,25 +10,17 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
-    public partial class FrmBeheerderMenu : Form
+    public partial class FrmKlantenMenu : Form
     {
-        public FrmBeheerderMenu()
+        public FrmKlantenMenu()
         {
             InitializeComponent();
         }
 
-        private void btnGebruikers_Click(object sender, EventArgs e)
-        {
-            FrmUsers usersForm = new FrmUsers();
-            usersForm.Show();
-            this.Hide();
-        }
-
         private void btnKlanten_Click(object sender, EventArgs e)
         {
-            FrmDashboard dashboardForm = new FrmDashboard();
-            dashboardForm.Show();
-            this.Hide();
+            FrmKlanten klantenForm = new FrmKlanten();
+            klantenForm.Show();
         }
 
         private void btnAbbo_Click(object sender, EventArgs e)
@@ -41,24 +33,11 @@ namespace eindProjectAquaPalace
         {
             FrmDashboard dashboardForm = new FrmDashboard();
             dashboardForm.Show();
-            this.Hide();
-        }
-
-        private void btnGeschiedenis_Click(object sender, EventArgs e)
-        {
-            FrmGechiedenis geschiedenisForm = new FrmGechiedenis();
-            geschiedenisForm.Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            FrmRaportages frmRaportages = new FrmRaportages();
-            frmRaportages.Show();
         }
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            if (frmMedewerkerMenu.ActiveForm != null)
+            if(frmMedewerkerMenu.ActiveForm != null)
             {
                 frmMedewerkerMenu.ActiveForm.Show();
                 this.Close();

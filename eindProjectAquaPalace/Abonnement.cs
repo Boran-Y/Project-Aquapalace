@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 using Mysqlx.Expr;
+using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
@@ -52,6 +53,33 @@ namespace eindProjectAquaPalace
             }
             con.Close();
             return abonnementlist;
+        }
+
+
+        public static BindingSource MySQL_ToDatagridview()
+        {
+            MySqlConnection con = Database.start();
+            con.Open();
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"SELECT * FROM abonnementen;";
+            MySqlDataReader reader = myCommand.ExecuteReader();
+            BindingSource bSource = new BindingSource();
+            bSource.DataSource = reader;
+            con.Close();
+            return bSource;
+        }
+
+        public static string VerlopenAbonnementen()
+        {
+            MySqlConnection con = Database.start();
+            con.Open();
+            MySqlCommand myCommand = new MySqlCommand();
+            myCommand.Connection = con;
+            myCommand.CommandText = @"SELECT COUNT(*) FROM abonnementen WHERE einddatum < CURDATE() AND status = 'actief';";
+            string aantal = Convert.ToString(myCommand.ExecuteScalar());
+            con.Close();
+            return aantal;
         }
 
         public static string aantalAbonnementen()

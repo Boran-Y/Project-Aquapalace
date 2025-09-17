@@ -135,11 +135,11 @@
     <Compile Include="FrmGechiedenis.Designer.cs">
       <DependentUpon>FrmGechiedenis.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmhoofdmenu.cs">
+    <Compile Include="frmMedewerkerMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmhoofdmenu.Designer.cs">
-      <DependentUpon>frmhoofdmenu.cs</DependentUpon>
+    <Compile Include="frmMedewerkerMenu.Designer.cs">
+      <DependentUpon>frmMedewerkerMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmInlogScherm.cs">
       <SubType>Form</SubType>
@@ -153,11 +153,23 @@
     <Compile Include="FrmKlanten.Designer.cs">
       <DependentUpon>FrmKlanten.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmKlantenMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKlantenMenu.Designer.cs">
+      <DependentUpon>FrmKlantenMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frmklantenoverzicht.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frmklantenoverzicht.Designer.cs">
       <DependentUpon>Frmklantenoverzicht.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRaportages.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRaportages.Designer.cs">
+      <DependentUpon>FrmRaportages.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsers.cs">
       <SubType>Form</SubType>
@@ -166,6 +178,7 @@
       <DependentUpon>FrmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="Gebruikers.cs" />
+    <Compile Include="Geschiedenis.cs" />
     <Compile Include="klantenoverzicht.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -183,8 +196,11 @@
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmhoofdmenu.resx">
-      <DependentUpon>frmhoofdmenu.cs</DependentUpon>
+    <EmbeddedResource Include="FrmGechiedenis.resx">
+      <DependentUpon>FrmGechiedenis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMedewerkerMenu.resx">
+      <DependentUpon>frmMedewerkerMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInlogScherm.resx">
       <DependentUpon>frmInlogScherm.cs</DependentUpon>
@@ -192,8 +208,14 @@
     <EmbeddedResource Include="FrmKlanten.resx">
       <DependentUpon>FrmKlanten.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmKlantenMenu.resx">
+      <DependentUpon>FrmKlantenMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frmklantenoverzicht.resx">
       <DependentUpon>Frmklantenoverzicht.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRaportages.resx">
+      <DependentUpon>FrmRaportages.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmUsers.resx">
       <DependentUpon>FrmUsers.cs</DependentUpon>

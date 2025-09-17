@@ -61,7 +61,7 @@ class Gebruikers
         con.Open();
         MySqlCommand myCommand = new MySqlCommand();
         myCommand.Connection = con;
-        myCommand.CommandText = @"SELECT * FROM users;";
+        myCommand.CommandText = @"SELECT * FROM gebruikers;";
         MySqlDataReader reader = myCommand.ExecuteReader();
         while (reader.Read())
         {
@@ -88,7 +88,7 @@ class Gebruikers
         con.Open();
         MySqlCommand myCommand = new MySqlCommand();
         myCommand.Connection = con;
-        myCommand.CommandText = @"SELECT COUNT(*) FROM users;";
+        myCommand.CommandText = @"SELECT COUNT(*) FROM gebruikers;";
         string aantalusers = myCommand.ExecuteScalar().ToString();
         con.Close();
         return aantalusers;
@@ -100,7 +100,7 @@ class Gebruikers
         con.Open();
         MySqlCommand myCommand = new MySqlCommand();
         myCommand.Connection = con;
-        myCommand.CommandText = @"INSERT INTO users 
+        myCommand.CommandText = @"INSERT INTO gebruikers 
             (gebruikersnaam, wachtwoord_hash, rol, gekoppeld_klant) 
             VALUES (@gebruikersnaam, @wachtwoord_hash, @rol, @gekoppeld_klant);";
         myCommand.Parameters.AddWithValue("@gebruikersnaam", this.Gebruikersnaam);
@@ -122,7 +122,7 @@ class Gebruikers
         con.Open();
         MySqlCommand myCommand = new MySqlCommand();
         myCommand.Connection = con;
-        myCommand.CommandText = @"UPDATE users SET gebruikersnaam = @gebruikersnaam, wachtwoord_hash = @wachtwoord_hash, rol = @rol, gekoppeld_klant = @gekoppeld_klant WHERE gebruiker_id = @gebruiker_id;";
+        myCommand.CommandText = @"UPDATE gebruikers SET gebruikersnaam = @gebruikersnaam, wachtwoord_hash = @wachtwoord_hash, rol = @rol, gekoppeld_klant = @gekoppeld_klant WHERE gebruiker_id = @gebruiker_id;";
         myCommand.Parameters.AddWithValue("@gebruiker_id", this.GebruikerId);
         myCommand.Parameters.AddWithValue("@gebruikersnaam", this.Gebruikersnaam);
         string hashedPassword = BCrypt.Net.BCrypt.HashPassword(this.WachtwoordHash);
@@ -143,7 +143,7 @@ class Gebruikers
         con.Open();
         MySqlCommand myCommand = new MySqlCommand();
         myCommand.Connection = con;
-        myCommand.CommandText = @"DELETE FROM users WHERE gebruiker_id = @gebruiker_id;";
+        myCommand.CommandText = @"DELETE FROM gebruikers WHERE gebruiker_id = @gebruiker_id;";
         myCommand.Parameters.AddWithValue("@gebruiker_id", this.GebruikerId);
         myCommand.ExecuteNonQuery();
         myCommand.Dispose();
