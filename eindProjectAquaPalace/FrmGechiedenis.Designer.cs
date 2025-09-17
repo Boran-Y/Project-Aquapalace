@@ -117,6 +117,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FrmGechiedenis";
             this.Text = "FrmGechiedenis";
+            this.Load += new System.EventHandler(this.FrmGechiedenis_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

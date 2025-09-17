@@ -12,11 +12,13 @@ namespace eindProjectAquaPalace
 {
     public partial class FrmAbbo : Form
     {
+        public Gebruikers gebruikersobject;
         private FrmDashboard frmDashboard;
 
-        public FrmAbbo()
+        public FrmAbbo(Gebruikers gebruikersobject)
         {
             InitializeComponent();
+            this.gebruikersobject = gebruikersobject;
         }
 
         public FrmAbbo(FrmDashboard frmDashboard)
@@ -155,9 +157,23 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            if (frmDashboard != null)
+
+            GebruikersRol Gebruikers = new GebruikersRol();
+
+            if (Gebruikers == GebruikersRol.Medewerker)
             {
-                frmDashboard.Show();
+                if (frmMedewerkerMenu.ActiveForm != null)
+                {
+                    frmMedewerkerMenu.ActiveForm.Show();
+                }
+            }
+            
+            if (Gebruikers == GebruikersRol.Beheerder)
+            {
+                if(FrmBeheerderMenu.ActiveForm != null)
+                {
+                    FrmBeheerderMenu.ActiveForm.Show(this);
+                }
             }
         }
     }

@@ -12,9 +12,13 @@ namespace eindProjectAquaPalace
 {
     public partial class FrmBeheerderMenu : Form
     {
-        public FrmBeheerderMenu()
+        public Gebruikers gebruikersobject;
+
+        public FrmBeheerderMenu(Gebruikers gebruikersobject)
         {
             InitializeComponent();
+
+            this.gebruikersobject = gebruikersobject;
         }
 
         private void btnGebruikers_Click(object sender, EventArgs e)
@@ -26,9 +30,8 @@ namespace eindProjectAquaPalace
 
         private void btnKlanten_Click(object sender, EventArgs e)
         {
-            FrmDashboard dashboardForm = new FrmDashboard();
-            dashboardForm.Show();
-            this.Hide();
+          Frmklantenoverzicht klantenoverzicht = new Frmklantenoverzicht();
+            klantenoverzicht.Show();
         }
 
         private void btnAbbo_Click(object sender, EventArgs e)
@@ -58,11 +61,28 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            if (frmMedewerkerMenu.ActiveForm != null)
+
+            gebruikersobject.Rol = GebruikersRol.Medewerker;
+
+            if (gebruikersobject.Rol == GebruikersRol.Medewerker)
             {
-                frmMedewerkerMenu.ActiveForm.Show();
-                this.Close();
+                if (frmMedewerkerMenu.ActiveForm != null)
+                {
+                    frmMedewerkerMenu.ActiveForm.Show();
+                }
             }
+            else
+            {
+                if (FrmBeheerderMenu.ActiveForm != null)
+                {
+                    FrmBeheerderMenu.ActiveForm.Show();
+                }
+            }
+
+
+
+
+           
         }
     }
 }

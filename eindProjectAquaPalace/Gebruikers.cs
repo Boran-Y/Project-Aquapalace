@@ -10,7 +10,7 @@ public enum GebruikersRol
     Klant
 }
 
-class Gebruikers
+public class Gebruikers
 {
     public int GebruikerId;
     public string Gebruikersnaam;
@@ -148,5 +148,16 @@ class Gebruikers
         myCommand.ExecuteNonQuery();
         myCommand.Dispose();
         con.Close();
+    }
+
+    public static void GetGebruikerOpNaam()
+    {
+        MySqlConnection con = Database.start();
+        con.Open();
+        MySqlCommand mySqlCommand = new MySqlCommand();
+        mySqlCommand.Connection = con;
+
+
+        
     }
 }

@@ -39,13 +39,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.emailtxt = new System.Windows.Forms.TextBox();
-            this.stadtxt = new System.Windows.Forms.TextBox();
-            this.postcodetxt = new System.Windows.Forms.TextBox();
-            this.adresstxt = new System.Windows.Forms.TextBox();
+            this.txtTel = new System.Windows.Forms.TextBox();
+            this.txtAdres = new System.Windows.Forms.TextBox();
+            this.txtgeboortedatum = new System.Windows.Forms.TextBox();
             this.achternaamtxt = new System.Windows.Forms.TextBox();
             this.voornaamtxt = new System.Windows.Forms.TextBox();
             this.pasaanbtx = new System.Windows.Forms.Button();
             this.toevoegbtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtAcc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,32 +105,32 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(31, 84);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 16);
+            this.label3.Size = new System.Drawing.Size(101, 16);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Adress";
+            this.label3.Text = "geboorteDatum";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(31, 110);
+            this.label4.Location = new System.Drawing.Point(31, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(65, 16);
+            this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 6;
-            this.label4.Text = "Postcode";
+            this.label4.Text = "adress";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(31, 136);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 16);
+            this.label5.Size = new System.Drawing.Size(55, 16);
             this.label5.TabIndex = 7;
-            this.label5.Text = "Stad";
+            this.label5.Text = "telefoon";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(31, 161);
+            this.label6.Location = new System.Drawing.Point(43, 110);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(41, 16);
             this.label6.TabIndex = 8;
@@ -137,10 +139,12 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.txtAcc);
+            this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.emailtxt);
-            this.groupBox1.Controls.Add(this.stadtxt);
-            this.groupBox1.Controls.Add(this.postcodetxt);
-            this.groupBox1.Controls.Add(this.adresstxt);
+            this.groupBox1.Controls.Add(this.txtTel);
+            this.groupBox1.Controls.Add(this.txtAdres);
+            this.groupBox1.Controls.Add(this.txtgeboortedatum);
             this.groupBox1.Controls.Add(this.achternaamtxt);
             this.groupBox1.Controls.Add(this.voornaamtxt);
             this.groupBox1.Controls.Add(this.pasaanbtx);
@@ -150,40 +154,40 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(368, 72);
+            this.groupBox1.Location = new System.Drawing.Point(378, 48);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(328, 214);
+            this.groupBox1.Size = new System.Drawing.Size(328, 275);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Aanpassen";
             // 
             // emailtxt
             // 
-            this.emailtxt.Location = new System.Drawing.Point(159, 155);
+            this.emailtxt.Location = new System.Drawing.Point(159, 107);
             this.emailtxt.Name = "emailtxt";
             this.emailtxt.Size = new System.Drawing.Size(152, 22);
             this.emailtxt.TabIndex = 15;
             // 
-            // stadtxt
+            // txtTel
             // 
-            this.stadtxt.Location = new System.Drawing.Point(159, 130);
-            this.stadtxt.Name = "stadtxt";
-            this.stadtxt.Size = new System.Drawing.Size(152, 22);
-            this.stadtxt.TabIndex = 14;
+            this.txtTel.Location = new System.Drawing.Point(159, 136);
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(152, 22);
+            this.txtTel.TabIndex = 14;
             // 
-            // postcodetxt
+            // txtAdres
             // 
-            this.postcodetxt.Location = new System.Drawing.Point(159, 104);
-            this.postcodetxt.Name = "postcodetxt";
-            this.postcodetxt.Size = new System.Drawing.Size(152, 22);
-            this.postcodetxt.TabIndex = 13;
+            this.txtAdres.Location = new System.Drawing.Point(159, 170);
+            this.txtAdres.Name = "txtAdres";
+            this.txtAdres.Size = new System.Drawing.Size(152, 22);
+            this.txtAdres.TabIndex = 13;
             // 
-            // adresstxt
+            // txtgeboortedatum
             // 
-            this.adresstxt.Location = new System.Drawing.Point(159, 78);
-            this.adresstxt.Name = "adresstxt";
-            this.adresstxt.Size = new System.Drawing.Size(152, 22);
-            this.adresstxt.TabIndex = 12;
+            this.txtgeboortedatum.Location = new System.Drawing.Point(159, 78);
+            this.txtgeboortedatum.Name = "txtgeboortedatum";
+            this.txtgeboortedatum.Size = new System.Drawing.Size(152, 22);
+            this.txtgeboortedatum.TabIndex = 12;
             // 
             // achternaamtxt
             // 
@@ -202,7 +206,7 @@
             // pasaanbtx
             // 
             this.pasaanbtx.BackColor = System.Drawing.Color.SteelBlue;
-            this.pasaanbtx.Location = new System.Drawing.Point(172, 179);
+            this.pasaanbtx.Location = new System.Drawing.Point(172, 231);
             this.pasaanbtx.Name = "pasaanbtx";
             this.pasaanbtx.Size = new System.Drawing.Size(102, 29);
             this.pasaanbtx.TabIndex = 9;
@@ -220,6 +224,22 @@
             this.toevoegbtn.Text = "voeg klant toe";
             this.toevoegbtn.UseVisualStyleBackColor = false;
             this.toevoegbtn.Click += new System.EventHandler(this.toevoegbtn_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Account status";
+            // 
+            // txtAcc
+            // 
+            this.txtAcc.Location = new System.Drawing.Point(159, 201);
+            this.txtAcc.Name = "txtAcc";
+            this.txtAcc.Size = new System.Drawing.Size(152, 22);
+            this.txtAcc.TabIndex = 17;
             // 
             // Frmklantenoverzicht
             // 
@@ -254,12 +274,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox emailtxt;
-        private System.Windows.Forms.TextBox stadtxt;
-        private System.Windows.Forms.TextBox postcodetxt;
-        private System.Windows.Forms.TextBox adresstxt;
+        private System.Windows.Forms.TextBox txtTel;
+        private System.Windows.Forms.TextBox txtAdres;
+        private System.Windows.Forms.TextBox txtgeboortedatum;
         private System.Windows.Forms.TextBox achternaamtxt;
         private System.Windows.Forms.TextBox voornaamtxt;
         private System.Windows.Forms.Button pasaanbtx;
         private System.Windows.Forms.Button toevoegbtn;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtAcc;
     }
 }

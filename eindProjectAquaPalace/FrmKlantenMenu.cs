@@ -10,17 +10,28 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
+
     public partial class FrmKlantenMenu : Form
     {
+        public Gebruikers gebruikersobject;
+        public FrmKlantenMenu(Gebruikers gebruikersobject)
+        {
+
+            InitializeComponent();
+
+            this.gebruikersobject = gebruikersobject;
+
+
+        }
+
         public FrmKlantenMenu()
         {
-            InitializeComponent();
         }
 
         private void btnKlanten_Click(object sender, EventArgs e)
         {
-            FrmKlanten klantenForm = new FrmKlanten();
-            klantenForm.Show();
+            Frmklantenoverzicht klantenOverzicht = new Frmklantenoverzicht();
+            klantenOverzicht.ShowDialog();
         }
 
         private void btnAbbo_Click(object sender, EventArgs e)
@@ -42,6 +53,11 @@ namespace eindProjectAquaPalace
                 frmMedewerkerMenu.ActiveForm.Show();
                 this.Close();
             }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

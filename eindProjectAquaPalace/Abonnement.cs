@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
-    class Abonnement
+     public class Abonnement
     {
         public int AbonnementId;
         public int KlantId;

@@ -7,86 +7,88 @@ namespace klantenoverzicht
 {
     public class Persoon
     {
-        public int Id;
+        public int KlantId;
         public string Voornaam;
         public string Achternaam;
-        public string Adres;
-        public string Postcode;
-        public string Stad;
+        public DateTime Geboortedatum;
         public string Email;
+        public string Telefoonnummer;
+        public string Adres;
+        public string AccountStatus;
 
-            public static List<Persoon> GetPersonen()
+        public static List<Persoon> GetPersonen()
+        {
+            List<Persoon> lijst = new List<Persoon>();
+            MySqlConnection con = Database.start();
+            con.Open();
+
+            string sql = "SELECT * FROM klanten;"; // tabel: klanten
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            while (reader.Read())
             {
-                List<Persoon> lijst = new List<Persoon>();
-                MySqlConnection con = Database.start();
-                con.Open();
-
-                string sql = "SELECT * FROM klanten;"; // tabelnaam aannemen: klanten
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Persoon p = new Persoon();
-                    p.Id = Convert.ToInt32(reader["customer_id"]);
-                    p.Voornaam = Convert.ToString(reader["customer_firstname"]);
-                    p.Achternaam = Convert.ToString(reader["customer_lastname"]);
-                    p.Adres = Convert.ToString(reader["customer_address"]);
-                    p.Postcode = Convert.ToString(reader["customer_zipcode"]);
-                    p.Stad = Convert.ToString(reader["customer_city"]);
-                    p.Email = Convert.ToString(reader["customer_email"]);
-                    lijst.Add(p);
-                }
-
-                con.Close();
-                return lijst;
+                Persoon p = new Persoon();
+                p.KlantId = Convert.ToInt32(reader["klant_id"]);
+                p.Voornaam = Convert.ToString(reader["voornaam"]);
+                p.Achternaam = Convert.ToString(reader["achternaam"]);
+                p.Geboortedatum = Convert.ToDateTime(reader["geboortedatum"]);
+                p.Email = Convert.ToString(reader["email"]);
+                p.Telefoonnummer = Convert.ToString(reader["telefoonnummer"]);
+                p.Adres = Convert.ToString(reader["adres"]);
+                p.AccountStatus = Convert.ToString(reader["account_status"]);
+                lijst.Add(p);
             }
 
-            public void Verwijder()
-            {
-                MySqlConnection con = Database.start();
-                con.Open();
-
-                string sql = "DELETE FROM klanten WHERE customer_id = @id;";
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", Id);
-                cmd.ExecuteNonQuery();
-
-                con.Close();
-            }
-
-            public void Wijzig()
-            {
-                MySqlConnection con = Database.start();
-                con.Open();
-
-                string sql = @"UPDATE klanten 
-                       SET customer_firstname=@voornaam, 
-                           customer_lastname=@achternaam, 
-                           customer_address=@adres, 
-                           customer_zipcode=@postcode, 
-                           customer_city=@stad, 
-                           customer_email=@email 
-                       WHERE customer_id=@id;";
-
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                cmd.Parameters.AddWithValue("@id", Id);
-                cmd.Parameters.AddWithValue("@voornaam", Voornaam);
-                cmd.Parameters.AddWithValue("@achternaam", Achternaam);
-                cmd.Parameters.AddWithValue("@adres", Adres);
-                cmd.Parameters.AddWithValue("@postcode", Postcode);
-                cmd.Parameters.AddWithValue("@stad", Stad);
-                cmd.Parameters.AddWithValue("@email", Email);
-
-                cmd.ExecuteNonQuery();
-                con.Close();
-            }
-
-            public override string ToString()
-            {
-                return $"{Voornaam} {Achternaam} ({Email})";
-            }
+            con.Close();
+            return lijst;
         }
 
-    }
+        public void Verwijder()
+        {
+            MySqlConnection con = Database.start();
+            con.Open();
 
+            string sql = "DELETE FROM klanten WHERE klant_id = @id;";
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", KlantId);
+            cmd.ExecuteNonQuery();
+
+            con.Close();
+        }
+
+        public void Wijzig()
+        {
+            MySqlConnection con = Database.start();
+            con.Open();
+
+            string sql = @"UPDATE klanten 
+                       SET voornaam=@voornaam, 
+                           achternaam=@achternaam, 
+                           geboortedatum=@geboortedatum, 
+                           email=@email, 
+                           telefoonnummer=@telefoonnummer, 
+                           adres=@adres, 
+                           account_status=@status
+                       WHERE klant_id=@id;";
+
+            MySqlCommand cmd = new MySqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("@id", KlantId);
+            cmd.Parameters.AddWithValue("@voornaam", Voornaam);
+            cmd.Parameters.AddWithValue("@achternaam", Achternaam);
+            cmd.Parameters.AddWithValue("@geboortedatum", Geboortedatum);
+            cmd.Parameters.AddWithValue("@email", Email);
+            cmd.Parameters.AddWithValue("@telefoonnummer", Telefoonnummer);
+            cmd.Parameters.AddWithValue("@adres", Adres);
+            cmd.Parameters.AddWithValue("@status", AccountStatus);
+
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public override string ToString()
+        {
+            return $"{Voornaam} {Achternaam} ({Email}, {AccountStatus})";
+        }
+    }
+}

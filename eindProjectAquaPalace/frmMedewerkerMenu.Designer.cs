@@ -31,11 +31,11 @@
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnKlanten = new System.Windows.Forms.Button();
             this.btnAbbo = new System.Windows.Forms.Button();
-            this.btnGeschiedenis = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTerug = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnGeschiedenis = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -75,18 +75,6 @@
             this.btnAbbo.Text = "abonnementen";
             this.btnAbbo.UseVisualStyleBackColor = false;
             this.btnAbbo.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // btnGeschiedenis
-            // 
-            this.btnGeschiedenis.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.btnGeschiedenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGeschiedenis.Location = new System.Drawing.Point(42, 373);
-            this.btnGeschiedenis.Name = "btnGeschiedenis";
-            this.btnGeschiedenis.Size = new System.Drawing.Size(218, 46);
-            this.btnGeschiedenis.TabIndex = 3;
-            this.btnGeschiedenis.Text = "geschiedenis";
-            this.btnGeschiedenis.UseVisualStyleBackColor = false;
-            this.btnGeschiedenis.Click += new System.EventHandler(this.btnGeschiedenis_Click);
             // 
             // panel1
             // 
@@ -134,6 +122,18 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welkom bij het Hoofdmenu";
             // 
+            // btnGeschiedenis
+            // 
+            this.btnGeschiedenis.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGeschiedenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeschiedenis.Location = new System.Drawing.Point(42, 373);
+            this.btnGeschiedenis.Name = "btnGeschiedenis";
+            this.btnGeschiedenis.Size = new System.Drawing.Size(218, 46);
+            this.btnGeschiedenis.TabIndex = 3;
+            this.btnGeschiedenis.Text = "geschiedenis";
+            this.btnGeschiedenis.UseVisualStyleBackColor = false;
+            this.btnGeschiedenis.Click += new System.EventHandler(this.btnGeschiedenis_Click);
+            // 
             // frmMedewerkerMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -156,10 +156,10 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnKlanten;
         private System.Windows.Forms.Button btnAbbo;
-        private System.Windows.Forms.Button btnGeschiedenis;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTerug;
+        private System.Windows.Forms.Button btnGeschiedenis;
     }
 }

@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
+
     public partial class FrmDashboard : Form
     {
         public FrmDashboard()
@@ -19,9 +20,9 @@ namespace eindProjectAquaPalace
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (frmMedewerkerMenu.ActiveForm != null)
+            if (FrmBeheerderMenu.ActiveForm != null)
             {
-                frmMedewerkerMenu.ActiveForm.Show();
+                FrmBeheerderMenu.ActiveForm.Show();
             }
             this.Close();
 

@@ -28,10 +28,32 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            if(frmMedewerkerMenu.ActiveForm != null)
+            GebruikersRol Gebruikers = new GebruikersRol();
+
+            if (Gebruikers == GebruikersRol.Medewerker)
             {
-                frmMedewerkerMenu.ActiveForm.Close();
+                if (frmMedewerkerMenu.ActiveForm != null)
+                {
+                    frmMedewerkerMenu.ActiveForm.Show();
+                }
             }
+            else
+            {
+                if (FrmBeheerderMenu.ActiveForm != null)
+                {
+                    FrmBeheerderMenu.ActiveForm.Show();
+                }
+            }
+
+            if (FrmBeheerderMenu.ActiveForm != null)
+            {
+                FrmBeheerderMenu.ActiveForm.Close();
+            }
+        }
+
+        private void FrmGechiedenis_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -51,10 +51,11 @@ namespace eindProjectAquaPalace
             {
                 persoon.Voornaam = voornaamtxt.Text;
                 persoon.Achternaam = achternaamtxt.Text;
-                persoon.Adres = adresstxt.Text;
-                persoon.Postcode = postcodetxt.Text;
-                persoon.Stad = stadtxt.Text;
-                persoon.Email = emailtxt.Text;
+                persoon.Geboortedatum = DateTime.Parse(txtgeboortedatum.Text);
+                persoon.Email =  emailtxt.Text;
+                persoon.Telefoonnummer= txtTel.Text;
+                persoon.Adres= txtAdres.Text;
+                persoon.AccountStatus= txtAdres.Text;
 
                 persoon.Wijzig();
                 MessageBox.Show("Gegevens bijgewerkt.");

@@ -53,7 +53,7 @@ namespace eindProjectAquaPalace
                 switch (gebruikersobject.Rol)
                 {
                     case GebruikersRol.Beheerder:
-                        FrmBeheerderMenu beheerderMenuForm = new FrmBeheerderMenu();
+                        FrmBeheerderMenu beheerderMenuForm = new FrmBeheerderMenu(gebruikersobject);
                         beheerderMenuForm.Show();
                         break;
                     case GebruikersRol.Medewerker:

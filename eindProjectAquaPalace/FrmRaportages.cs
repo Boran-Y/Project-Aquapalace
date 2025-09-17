@@ -50,8 +50,23 @@ namespace eindProjectAquaPalace
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            frmMedewerkerMenu hoofdmenu = new frmMedewerkerMenu();
-            hoofdmenu.Show();
+            FrmBeheerderMenu frmBeheerderMenu = FrmBeheerderMenu();
+            frmBeheerderMenu.ShowDialog();
+        }
+
+        private FrmBeheerderMenu FrmBeheerderMenu()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void lbxverloopt_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lbxActief_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

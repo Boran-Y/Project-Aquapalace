@@ -10,18 +10,43 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
+    
     public partial class FrmKlanten : Form
     {
+        public Gebruikers gebruikersobject;
+        public FrmKlanten(Gebruikers gebruikersobject)
+        {
+          
+            InitializeComponent();
+            this.gebruikersobject = gebruikersobject;
+        }
+
         public FrmKlanten()
         {
-            InitializeComponent();
         }
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
-            frmMedewerkerMenu klantenForm = new frmMedewerkerMenu();
-            klantenForm.Show();
-            this.Hide();
+            GebruikersRol Gebruiker = new GebruikersRol();
+
+            if( gebruikersobject != null )
+            {
+                if (gebruikersobject.Rol == GebruikersRol.Medewerker)
+                {
+                    if (frmMedewerkerMenu.ActiveForm != null)
+                    {
+                        frmMedewerkerMenu.ActiveForm.Show();
+                    }
+                }
+                if(gebruikersobject.Rol == GebruikersRol.Beheerder)
+                {
+                    if (FrmBeheerderMenu.ActiveForm != null)
+                    {
+                        FrmBeheerderMenu.ActiveForm.Show();
+                    }
+                }
+            }
+
         }
 
         private void cbxAbbo_SelectedIndexChanged(object sender, EventArgs e)
