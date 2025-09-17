@@ -31,7 +31,7 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"SELECT * FROM klanten;";
+            myCommand.CommandText = @"SELECT * FROM customers;";
 
             MySqlDataReader reader = myCommand.ExecuteReader();
             while (reader.Read())
@@ -57,7 +57,7 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"SELECT COUNT(*) FROM klanten;";
+            myCommand.CommandText = @"SELECT COUNT(*) FROM customers;";
             string aantalKlanten = myCommand.ExecuteScalar().ToString();
             con.Close();
             return aantalKlanten;
@@ -69,7 +69,7 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"INSERT INTO klanten 
+            myCommand.CommandText = @"INSERT INTO customers 
                 (voornaam, achternaam, geboortedatum, email, telefoonnummer, adres, account_status) 
                 VALUES (@Voornaam, @Achternaam, @Geboortedatum, @Email, @Telefoonnummer, @Adres, @AccountStatus);";
 
@@ -92,7 +92,7 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"UPDATE klanten
+            myCommand.CommandText = @"UPDATE customers
                 SET voornaam = @Voornaam,
                     achternaam = @Achternaam,
                     geboortedatum = @Geboortedatum,
@@ -122,7 +122,7 @@ namespace eindProjectAquaPalace
             con.Open();
             MySqlCommand myCommand = new MySqlCommand();
             myCommand.Connection = con;
-            myCommand.CommandText = @"DELETE FROM klanten WHERE klant_id = @KlantId";
+            myCommand.CommandText = @"DELETE FROM customers WHERE klant_id = @KlantId";
             myCommand.Parameters.AddWithValue("@KlantId", this.KlantId);
             myCommand.ExecuteNonQuery();
             myCommand.Dispose();

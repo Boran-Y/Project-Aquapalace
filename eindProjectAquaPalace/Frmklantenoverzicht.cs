@@ -73,10 +73,5 @@ namespace eindProjectAquaPalace
             klantenForm.Show();
             this.Hide(); 
         }
-
-        private void Frmklantenoverzicht_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

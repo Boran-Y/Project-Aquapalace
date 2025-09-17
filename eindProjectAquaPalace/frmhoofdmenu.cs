@@ -10,10 +10,14 @@ using System.Windows.Forms;
 
 namespace eindProjectAquaPalace
 {
-    public partial class frmMedewerkerMenu : Form
+    public partial class frmhoofdmenu : Form
     {
+<<<<<<< HEAD:eindProjectAquaPalace/frmhoofdmenu.cs
+        public frmhoofdmenu()
+=======
         public Gebruikers gebruikersobject;
         public frmMedewerkerMenu(Gebruikers gebruikersobject)
+>>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e:eindProjectAquaPalace/frmMedewerkerMenu.cs
         {
             InitializeComponent();
             this.gebruikersobject = gebruikersobject;
@@ -25,9 +29,9 @@ namespace eindProjectAquaPalace
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if(frmMedewerkerMenu.ActiveForm != null)
+            if(frmhoofdmenu.ActiveForm != null)
             {
-                frmMedewerkerMenu.ActiveForm.Hide();
+                frmhoofdmenu.ActiveForm.Hide();
             }
         }
 
@@ -60,18 +64,9 @@ namespace eindProjectAquaPalace
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
-            
-
-        }
-
-        private void btnGeschiedenis_Click(object sender, EventArgs e)
-        {
-            FrmGechiedenis geschiedenisForm = new FrmGechiedenis();
-            geschiedenisForm.Show();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
+            FrmAbbo AbboForm = new FrmAbbo();
+            AbboForm.Show();
+            this.Hide();
 
         }
     }

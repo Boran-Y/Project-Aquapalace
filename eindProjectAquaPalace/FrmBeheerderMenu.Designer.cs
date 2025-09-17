@@ -75,7 +75,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
             this.panel1.Controls.Add(this.btnGebruikers);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnDashboard);
@@ -109,7 +109,6 @@
             this.button1.TabIndex = 4;
             this.button1.Text = "raportages";
             this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDashboard
             // 
@@ -133,7 +132,6 @@
             this.btnGeschiedenis.TabIndex = 3;
             this.btnGeschiedenis.Text = "geschiedenis";
             this.btnGeschiedenis.UseVisualStyleBackColor = false;
-            this.btnGeschiedenis.Click += new System.EventHandler(this.btnGeschiedenis_Click);
             // 
             // btnKlanten
             // 

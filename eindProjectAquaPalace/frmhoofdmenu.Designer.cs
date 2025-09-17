@@ -1,6 +1,6 @@
 ﻿namespace eindProjectAquaPalace
 {
-    partial class frmMedewerkerMenu
+    partial class frmhoofdmenu
     {
         /// <summary>
         /// Required designer variable.
@@ -32,10 +32,15 @@
             this.btnKlanten = new System.Windows.Forms.Button();
             this.btnAbbo = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnTerug = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD:eindProjectAquaPalace/frmhoofdmenu.Designer.cs
+            this.btnGebruikers = new System.Windows.Forms.Button();
+=======
             this.btnGeschiedenis = new System.Windows.Forms.Button();
+>>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e:eindProjectAquaPalace/frmMedewerkerMenu.Designer.cs
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -44,7 +49,7 @@
             // 
             this.btnDashboard.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDashboard.Location = new System.Drawing.Point(42, 86);
+            this.btnDashboard.Location = new System.Drawing.Point(42, 33);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(218, 46);
             this.btnDashboard.TabIndex = 0;
@@ -56,7 +61,7 @@
             // 
             this.btnKlanten.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnKlanten.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnKlanten.Location = new System.Drawing.Point(42, 184);
+            this.btnKlanten.Location = new System.Drawing.Point(42, 111);
             this.btnKlanten.Name = "btnKlanten";
             this.btnKlanten.Size = new System.Drawing.Size(218, 46);
             this.btnKlanten.TabIndex = 1;
@@ -68,7 +73,7 @@
             // 
             this.btnAbbo.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnAbbo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbbo.Location = new System.Drawing.Point(42, 277);
+            this.btnAbbo.Location = new System.Drawing.Point(42, 193);
             this.btnAbbo.Name = "btnAbbo";
             this.btnAbbo.Size = new System.Drawing.Size(218, 46);
             this.btnAbbo.TabIndex = 2;
@@ -76,9 +81,25 @@
             this.btnAbbo.UseVisualStyleBackColor = false;
             this.btnAbbo.Click += new System.EventHandler(this.button3_Click);
             // 
+<<<<<<< HEAD:eindProjectAquaPalace/frmhoofdmenu.Designer.cs
+            // btnGeschiedenis
+            // 
+            this.btnGeschiedenis.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGeschiedenis.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGeschiedenis.Location = new System.Drawing.Point(42, 281);
+            this.btnGeschiedenis.Name = "btnGeschiedenis";
+            this.btnGeschiedenis.Size = new System.Drawing.Size(218, 46);
+            this.btnGeschiedenis.TabIndex = 3;
+            this.btnGeschiedenis.Text = "geschiedenis";
+            this.btnGeschiedenis.UseVisualStyleBackColor = false;
+            // 
+=======
+>>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e:eindProjectAquaPalace/frmMedewerkerMenu.Designer.cs
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.panel1.Controls.Add(this.btnGebruikers);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.btnDashboard);
             this.panel1.Controls.Add(this.btnGeschiedenis);
             this.panel1.Controls.Add(this.btnKlanten);
@@ -87,7 +108,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(306, 521);
             this.panel1.TabIndex = 4;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(42, 376);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(218, 46);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "raportages";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // panel2
             // 
@@ -122,6 +153,20 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Welkom bij het Hoofdmenu";
             // 
+<<<<<<< HEAD:eindProjectAquaPalace/frmhoofdmenu.Designer.cs
+            // btnGebruikers
+            // 
+            this.btnGebruikers.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGebruikers.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGebruikers.Location = new System.Drawing.Point(42, 453);
+            this.btnGebruikers.Name = "btnGebruikers";
+            this.btnGebruikers.Size = new System.Drawing.Size(218, 46);
+            this.btnGebruikers.TabIndex = 5;
+            this.btnGebruikers.Text = "gebruikers";
+            this.btnGebruikers.UseVisualStyleBackColor = false;
+            // 
+            // frmhoofdmenu
+=======
             // btnGeschiedenis
             // 
             this.btnGeschiedenis.BackColor = System.Drawing.SystemColors.ActiveCaption;
@@ -135,13 +180,14 @@
             this.btnGeschiedenis.Click += new System.EventHandler(this.btnGeschiedenis_Click);
             // 
             // frmMedewerkerMenu
+>>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e:eindProjectAquaPalace/frmMedewerkerMenu.Designer.cs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(912, 522);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "frmMedewerkerMenu";
+            this.Name = "frmhoofdmenu";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.frmhoofdmenu_Load);
             this.panel1.ResumeLayout(false);
@@ -157,9 +203,14 @@
         private System.Windows.Forms.Button btnKlanten;
         private System.Windows.Forms.Button btnAbbo;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnTerug;
+<<<<<<< HEAD:eindProjectAquaPalace/frmhoofdmenu.Designer.cs
+        private System.Windows.Forms.Button btnGebruikers;
+=======
         private System.Windows.Forms.Button btnGeschiedenis;
+>>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e:eindProjectAquaPalace/frmMedewerkerMenu.Designer.cs
     }
 }

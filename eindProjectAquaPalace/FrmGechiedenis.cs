@@ -16,6 +16,8 @@ namespace eindProjectAquaPalace
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
+=======
 
         private void btnOverzicht_Click(object sender, EventArgs e)
         {
@@ -55,5 +57,6 @@ namespace eindProjectAquaPalace
         {
 
         }
+>>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e
     }
 }
