@@ -117,6 +117,12 @@
     <Compile Include="FrmBeheerderMenu.Designer.cs">
       <DependentUpon>FrmBeheerderMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmgastoverzicht.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmgastoverzicht.Designer.cs">
+      <DependentUpon>frmgastoverzicht.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +189,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBeheerderMenu.resx">
       <DependentUpon>FrmBeheerderMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmgastoverzicht.resx">
+      <DependentUpon>frmgastoverzicht.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDashboard.resx">
       <DependentUpon>FrmDashboard.cs</DependentUpon>
