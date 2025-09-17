@@ -117,6 +117,15 @@
             this.button2.Text = "Code registreren";
             this.button2.UseVisualStyleBackColor = true;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(791, 546);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(208, 64);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Code registreren";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // AbboBeheer
             // 
             this.AbboBeheer.Location = new System.Drawing.Point(15, 489);
