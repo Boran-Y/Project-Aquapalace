@@ -33,6 +33,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbxAbonementAantal = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.AbboBeheer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -108,6 +108,15 @@
             this.panel2.Size = new System.Drawing.Size(996, 643);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(791, 546);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(208, 64);
+            this.button2.TabIndex = 15;
+            this.button2.Text = "Code registreren";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // AbboBeheer
             // 
@@ -204,15 +213,6 @@
             this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Abonnement";
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(791, 546);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 64);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Code registreren";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // FrmDashboard
             // 
