@@ -20,15 +20,9 @@ namespace eindProjectAquaPalace
 
         private void button1_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            if (frmhoofdmenu.ActiveForm != null)
-            {
-                frmhoofdmenu.ActiveForm.Show();
-=======
             if (FrmBeheerderMenu.ActiveForm != null)
             {
                 FrmBeheerderMenu.ActiveForm.Show();
->>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e
             }
             this.Close();
 
@@ -50,6 +44,40 @@ namespace eindProjectAquaPalace
 
         private void lbxAbonementAantal_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FrmDashboard_Load(object sender, EventArgs e)
+        {
+            lbxAbonementAantal.Items.Clear();
+            foreach (var abonnementObject in Abonnement.getAbonnementen())
+            {
+                lbxAbonementAantal.Items.Add(abonnementObject);
+            }
+
+            lbxAbonementVerlopen.Items.Clear();
+            foreach (var abonnementObject in Abonnement.VerlopenAbonnementen())
+            {
+                lbxAbonementVerlopen.Items.Add(abonnementObject);
+            }
+
+            lbxIncheck.Items.Clear();
+            foreach (var geschiedenis in Geschiedenis.incheckDatum())
+            {
+                lbxIncheck.Items.Add(geschiedenis);
+            }
+
+        }
+
+        private void AbboBeheer_Click_1(object sender, EventArgs e)
+        {
+            FrmAbbo frmAbbo = new FrmAbbo();
+            frmAbbo.Show();
 
         }
     }

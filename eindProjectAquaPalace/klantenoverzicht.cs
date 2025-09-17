@@ -28,31 +28,6 @@ namespace klantenoverzicht
 
             while (reader.Read())
             {
-<<<<<<< HEAD
-                List<Persoon> lijst = new List<Persoon>();
-                MySqlConnection con = Database.start();
-                con.Open();
-
-                string sql = "SELECT * FROM customers;"; // tabelnaam aannemen: klanten
-                MySqlCommand cmd = new MySqlCommand(sql, con);
-                MySqlDataReader reader = cmd.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Persoon p = new Persoon();
-                    p.Id = Convert.ToInt32(reader["customer_id"]);
-                    p.Voornaam = Convert.ToString(reader["customer_firstname"]);
-                    p.Achternaam = Convert.ToString(reader["customer_lastname"]);
-                    p.Adres = Convert.ToString(reader["customer_address"]);
-                    p.Postcode = Convert.ToString(reader["customer_zipcode"]);
-                    p.Stad = Convert.ToString(reader["customer_city"]);
-                    p.Email = Convert.ToString(reader["customer_email"]);
-                    lijst.Add(p);
-                }
-
-                con.Close();
-                return lijst;
-=======
                 Persoon p = new Persoon();
                 p.KlantId = Convert.ToInt32(reader["klant_id"]);
                 p.Voornaam = Convert.ToString(reader["voornaam"]);
@@ -63,7 +38,6 @@ namespace klantenoverzicht
                 p.Adres = Convert.ToString(reader["adres"]);
                 p.AccountStatus = Convert.ToString(reader["account_status"]);
                 lijst.Add(p);
->>>>>>> 7a2ae1f00963ff4af96b45a935cf0d5a67dd3e3e
             }
 
             con.Close();
