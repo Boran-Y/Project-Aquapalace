@@ -18,7 +18,7 @@ namespace eindProjectAquaPalace
         public DateTime Einddatum;
         public int SaldoRitten;
         public string Status;
-        public bool Verlengbaar;
+        public int Verlengbaar;
         public DateTime Aanmaakdatum;
         public DateTime LaatsteWijziging;
 
@@ -46,7 +46,7 @@ namespace eindProjectAquaPalace
                 abonnementobject.Einddatum = Convert.ToDateTime(reader["einddatum"]);
                 abonnementobject.SaldoRitten = Convert.ToInt32(reader["saldo_ritten"]);
                 abonnementobject.Status = Convert.ToString(reader["status"]);
-                abonnementobject.Verlengbaar = Convert.ToBoolean(reader["verlengbaar"]);
+                abonnementobject.Verlengbaar = Convert.ToInt32(reader["verlengbaar"]);
                 abonnementobject.Aanmaakdatum = Convert.ToDateTime(reader["aanmaakdatum"]);
                 abonnementobject.LaatsteWijziging = Convert.ToDateTime(reader["laatste_wijziging"]);
                 abonnementlist.Add(abonnementobject);

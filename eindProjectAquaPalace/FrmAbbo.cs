@@ -69,7 +69,7 @@ namespace eindProjectAquaPalace
             DateTime Einddatum = DateTime.Parse(txtVervaldatum.Text);
             int saldoRitten = int.Parse(txtSaldo.Text);
             string status = txtStatus.Text;
-            bool verlengbaar = bool.Parse(txtVerlengbaar.Text);
+            int  verlengbaar = int.Parse(txtVerlengbaar.Text);
             DateTime Aanmaakdatum = DateTime.Parse(txtOverigeRitten.Text);
             DateTime LaatsteWijziging = DateTime.Parse(txtActief.Text);
        
@@ -112,7 +112,7 @@ namespace eindProjectAquaPalace
             DateTime Einddatum = DateTime.Parse(txtVervaldatum.Text);
             int saldoRitten = int.Parse(txtSaldo.Text);
             string status = txtStatus.Text;
-            bool verlengbaar = bool.Parse(txtVerlengbaar.Text);
+            int verlengbaar = int.Parse(txtVerlengbaar.Text);
             DateTime Aanmaakdatum = DateTime.Parse(txtOverigeRitten.Text);
             DateTime LaatsteWijziging = DateTime.Parse(txtActief.Text);
 

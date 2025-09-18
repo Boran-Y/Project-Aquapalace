@@ -12,6 +12,7 @@ namespace eindProjectAquaPalace
 {
     public partial class FrmRaportages : Form
     {
+
         public FrmRaportages()
         {
             InitializeComponent();
@@ -49,12 +50,13 @@ namespace eindProjectAquaPalace
         }
 
         private void btnTerug_Click(object sender, EventArgs e)
-        {
+        { 
+
             FrmBeheerderMenu frmBeheerderMenu = FrmBeheerderMenu();
             frmBeheerderMenu.ShowDialog();
         }
 
-        private FrmBeheerderMenu FrmBeheerderMenu()
+        public FrmBeheerderMenu FrmBeheerderMenu()
         {
             throw new NotImplementedException();
         }

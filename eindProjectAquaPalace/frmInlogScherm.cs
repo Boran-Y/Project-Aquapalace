@@ -78,5 +78,11 @@ namespace eindProjectAquaPalace
                 MessageBox.Show("Ongeldige login");
             }
         }
+
+        private void btnregister_Click(object sender, EventArgs e)
+        {
+            FrmKlanten klantenForm = new FrmKlanten();
+            klantenForm.Show();
+        }
     }
 }
