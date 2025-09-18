@@ -33,7 +33,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.lbxAbonementAantal = new System.Windows.Forms.ListBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.AbboBeheer = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -44,6 +43,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.lbxAbboverlopen = new System.Windows.Forms.ListBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -85,16 +86,17 @@
             // 
             this.lbxAbonementAantal.FormattingEnabled = true;
             this.lbxAbonementAantal.ItemHeight = 16;
-            this.lbxAbonementAantal.Location = new System.Drawing.Point(41, 102);
+            this.lbxAbonementAantal.Location = new System.Drawing.Point(88, 85);
             this.lbxAbonementAantal.Name = "lbxAbonementAantal";
-            this.lbxAbonementAantal.Size = new System.Drawing.Size(916, 228);
+            this.lbxAbonementAantal.Size = new System.Drawing.Size(253, 228);
             this.lbxAbonementAantal.TabIndex = 1;
             this.lbxAbonementAantal.SelectedIndexChanged += new System.EventHandler(this.lbxAbonementAantal_SelectedIndexChanged);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.lbxAbboverlopen);
             this.panel2.Controls.Add(this.AbboBeheer);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -110,22 +112,13 @@
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(791, 546);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(208, 64);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Code registreren";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
             // AbboBeheer
             // 
-            this.AbboBeheer.Location = new System.Drawing.Point(15, 489);
+            this.AbboBeheer.Location = new System.Drawing.Point(343, 423);
             this.AbboBeheer.Name = "AbboBeheer";
             this.AbboBeheer.Size = new System.Drawing.Size(323, 63);
             this.AbboBeheer.TabIndex = 14;
-            this.AbboBeheer.Text = "Geselecteerd abonnement beheren";
+            this.AbboBeheer.Text = "abonnement koppelen";
             this.AbboBeheer.UseVisualStyleBackColor = true;
             this.AbboBeheer.Click += new System.EventHandler(this.AbboBeheer_Click_1);
             // 
@@ -133,7 +126,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(523, 400);
+            this.label6.Location = new System.Drawing.Point(723, 391);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(228, 20);
             this.label6.TabIndex = 12;
@@ -152,18 +145,19 @@
             // 
             this.lbxIncheck.FormattingEnabled = true;
             this.lbxIncheck.ItemHeight = 16;
-            this.lbxIncheck.Location = new System.Drawing.Point(515, 440);
+            this.lbxIncheck.Location = new System.Drawing.Point(712, 423);
             this.lbxIncheck.Name = "lbxIncheck";
             this.lbxIncheck.Size = new System.Drawing.Size(250, 180);
             this.lbxIncheck.TabIndex = 10;
+            this.lbxIncheck.SelectedIndexChanged += new System.EventHandler(this.lbxIncheck_SelectedIndexChanged);
             // 
             // btnKlantToevoegen
             // 
-            this.btnKlantToevoegen.Location = new System.Drawing.Point(15, 411);
+            this.btnKlantToevoegen.Location = new System.Drawing.Point(3, 423);
             this.btnKlantToevoegen.Name = "btnKlantToevoegen";
             this.btnKlantToevoegen.Size = new System.Drawing.Size(323, 63);
             this.btnKlantToevoegen.TabIndex = 8;
-            this.btnKlantToevoegen.Text = "Abonnement verlengen";
+            this.btnKlantToevoegen.Text = "klant toevoegen";
             this.btnKlantToevoegen.UseVisualStyleBackColor = true;
             this.btnKlantToevoegen.Click += new System.EventHandler(this.btnKlantToevoegen_Click);
             // 
@@ -209,11 +203,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(421, 63);
+            this.label1.Location = new System.Drawing.Point(141, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(112, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Abonnement";
+            // 
+            // lbxAbboverlopen
+            // 
+            this.lbxAbboverlopen.FormattingEnabled = true;
+            this.lbxAbboverlopen.ItemHeight = 16;
+            this.lbxAbboverlopen.Location = new System.Drawing.Point(570, 85);
+            this.lbxAbboverlopen.Name = "lbxAbboverlopen";
+            this.lbxAbboverlopen.Size = new System.Drawing.Size(253, 228);
+            this.lbxAbboverlopen.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(607, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(169, 20);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "verloopt binnenkort";
             // 
             // FrmDashboard
             // 
@@ -254,6 +267,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button AbboBeheer;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ListBox lbxAbboverlopen;
     }
 }

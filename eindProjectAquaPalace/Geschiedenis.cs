@@ -48,17 +48,33 @@ namespace eindProjectAquaPalace
         }
 
 
-        public static string incheckDatum()
+        public static string IncheckDatum()
         {
-            MySql.Data.MySqlClient.MySqlConnection con = Database.start();
-            con.Open();
-            MySql.Data.MySqlClient.MySqlCommand myCommand = new MySql.Data.MySqlClient.MySqlCommand();
-            myCommand.Connection = con;
-            myCommand.CommandText = @"SELECT incheck_datum FROM incheckgeschiedenis ORDER BY incheck_datum DESC LIMIT 1";
-            string datum = Convert.ToString(myCommand.ExecuteScalar());
-            con.Close();
-            return datum;
+            using (var con = Database.start())
+            {
+                con.Open();
+                using (var myCommand = new MySql.Data.MySqlClient.MySqlCommand(
+                    @"SELECT incheck_datum 
+              FROM incheckgeschiedenis 
+              ORDER BY incheck_datum DESC 
+              LIMIT 1", con))
+                {
+                    object result = myCommand.ExecuteScalar();
+
+                    if (result != null && result != DBNull.Value)
+                    {
+                        DateTime datum = Convert.ToDateTime(result);
+                        return datum.ToString("dd-MM-yyyy HH:mm:ss");
+                        // of alleen datum.ToShortDateString()
+                    }
+                    else
+                    {
+                        return "Geen datum gevonden";
+                    }
+                }
+            }
         }
+
 
         public static List<Geschiedenis> GetAlleGeschiedenis()
         {

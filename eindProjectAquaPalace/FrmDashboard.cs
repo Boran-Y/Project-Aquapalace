@@ -60,19 +60,19 @@ namespace eindProjectAquaPalace
                 lbxAbonementAantal.Items.Add(abonnementObject);
             }
 
-            /* FIX ME
-             * lbxAbonementVerlopen.Items.Clear();
+             
+             lbxAbboverlopen.Items.Clear();
             foreach (var abonnementObject in Abonnement.VerlopenAbonnementen())
             {
-                lbxAbonementVerlopen.Items.Add(abonnementObject);
+                lbxAbboverlopen.Items.Add(abonnementObject);
             }
 
             lbxIncheck.Items.Clear();
-            foreach (var geschiedenis in Geschiedenis.incheckDatum())
+            foreach (var geschiedenis in Geschiedenis.IncheckDatum())
             {
                 lbxIncheck.Items.Add(geschiedenis);
             }
-            */
+            
         }
 
         private void AbboBeheer_Click_1(object sender, EventArgs e)
@@ -83,6 +83,11 @@ namespace eindProjectAquaPalace
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lbxIncheck_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
