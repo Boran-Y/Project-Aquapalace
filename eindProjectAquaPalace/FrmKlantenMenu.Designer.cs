@@ -54,7 +54,7 @@
             // 
             this.btnTerug.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnTerug.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTerug.Location = new System.Drawing.Point(585, 66);
+            this.btnTerug.Location = new System.Drawing.Point(585, 47);
             this.btnTerug.Name = "btnTerug";
             this.btnTerug.Size = new System.Drawing.Size(82, 388);
             this.btnTerug.TabIndex = 1;
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 450);
+            this.ClientSize = new System.Drawing.Size(924, 414);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "FrmKlantenMenu";

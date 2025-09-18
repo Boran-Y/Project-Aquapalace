@@ -38,6 +38,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtAcc = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.emailtxt = new System.Windows.Forms.TextBox();
             this.txtTel = new System.Windows.Forms.TextBox();
             this.txtAdres = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@
             this.voornaamtxt = new System.Windows.Forms.TextBox();
             this.pasaanbtx = new System.Windows.Forms.Button();
             this.toevoegbtn = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtAcc = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +59,7 @@
             this.lbxoverzicht.Name = "lbxoverzicht";
             this.lbxoverzicht.Size = new System.Drawing.Size(288, 292);
             this.lbxoverzicht.TabIndex = 0;
+            this.lbxoverzicht.SelectedIndexChanged += new System.EventHandler(this.lbxoverzicht_SelectedIndexChanged);
             // 
             // overzichtbtn
             // 
@@ -161,6 +162,22 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Aanpassen";
             // 
+            // txtAcc
+            // 
+            this.txtAcc.Location = new System.Drawing.Point(159, 201);
+            this.txtAcc.Name = "txtAcc";
+            this.txtAcc.Size = new System.Drawing.Size(152, 22);
+            this.txtAcc.TabIndex = 17;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(31, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(93, 16);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Account status";
+            // 
             // emailtxt
             // 
             this.emailtxt.Location = new System.Drawing.Point(159, 107);
@@ -224,22 +241,6 @@
             this.toevoegbtn.Text = "voeg klant toe";
             this.toevoegbtn.UseVisualStyleBackColor = false;
             this.toevoegbtn.Click += new System.EventHandler(this.toevoegbtn_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(31, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(93, 16);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "Account status";
-            // 
-            // txtAcc
-            // 
-            this.txtAcc.Location = new System.Drawing.Point(159, 201);
-            this.txtAcc.Name = "txtAcc";
-            this.txtAcc.Size = new System.Drawing.Size(152, 22);
-            this.txtAcc.TabIndex = 17;
             // 
             // Frmklantenoverzicht
             // 

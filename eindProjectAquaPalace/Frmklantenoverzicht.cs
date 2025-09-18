@@ -78,5 +78,19 @@ namespace eindProjectAquaPalace
         {
 
         }
+
+        private void lbxoverzicht_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lbxoverzicht.SelectedItem is Persoon persoon)
+            {
+                voornaamtxt.Text = persoon.Voornaam;
+                achternaamtxt.Text = persoon.Achternaam;
+                txtgeboortedatum.Text = persoon.Geboortedatum.ToString("yyyy-MM-dd");
+                emailtxt.Text = persoon.Email;
+                txtTel.Text = persoon.Telefoonnummer;
+                txtAdres.Text = persoon.Adres;
+                txtAcc.Text = persoon.AccountStatus;
+            }
+        }
     }
 }

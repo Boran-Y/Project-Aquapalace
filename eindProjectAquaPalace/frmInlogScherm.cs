@@ -13,6 +13,7 @@ namespace eindProjectAquaPalace
 {
     public partial class frmInlogScherm : Form
     {
+        public static Gebruikers loggedInUser;
 
         public static frmInlogScherm Instance;
         public string tb1;
@@ -46,6 +47,8 @@ namespace eindProjectAquaPalace
 
             if (gebruikersobject != null)
             {
+                frmInlogScherm.loggedInUser = gebruikersobject;
+
                 // Gebruik de juiste properties uit Gebruikers
                 GebruikersNaam = gebruikersobject.Gebruikersnaam;
 
@@ -53,7 +56,7 @@ namespace eindProjectAquaPalace
                 switch (gebruikersobject.Rol)
                 {
                     case GebruikersRol.Beheerder:
-                        FrmBeheerderMenu beheerderMenuForm = new FrmBeheerderMenu(gebruikersobject);
+                        FrmBeheerderMenu beheerderMenuForm = new FrmBeheerderMenu();
                         beheerderMenuForm.Show();
                         break;
                     case GebruikersRol.Medewerker:

@@ -12,13 +12,9 @@ namespace eindProjectAquaPalace
 {
     public partial class FrmBeheerderMenu : Form
     {
-        public Gebruikers gebruikersobject;
-
-        public FrmBeheerderMenu(Gebruikers gebruikersobject)
+        public FrmBeheerderMenu()
         {
             InitializeComponent();
-
-            this.gebruikersobject = gebruikersobject;
         }
 
         private void btnGebruikers_Click(object sender, EventArgs e)
@@ -62,9 +58,9 @@ namespace eindProjectAquaPalace
         private void btnTerug_Click(object sender, EventArgs e)
         {
 
-            gebruikersobject.Rol = GebruikersRol.Medewerker;
+            frmInlogScherm.loggedInUser.Rol = GebruikersRol.Medewerker;
 
-            if (gebruikersobject.Rol == GebruikersRol.Medewerker)
+            if (frmInlogScherm.loggedInUser.Rol == GebruikersRol.Medewerker)
             {
                 if (frmMedewerkerMenu.ActiveForm != null)
                 {

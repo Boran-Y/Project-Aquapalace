@@ -60,7 +60,8 @@ namespace eindProjectAquaPalace
                 lbxAbonementAantal.Items.Add(abonnementObject);
             }
 
-            lbxAbonementVerlopen.Items.Clear();
+            /* FIX ME
+             * lbxAbonementVerlopen.Items.Clear();
             foreach (var abonnementObject in Abonnement.VerlopenAbonnementen())
             {
                 lbxAbonementVerlopen.Items.Add(abonnementObject);
@@ -71,7 +72,7 @@ namespace eindProjectAquaPalace
             {
                 lbxIncheck.Items.Add(geschiedenis);
             }
-
+            */
         }
 
         private void AbboBeheer_Click_1(object sender, EventArgs e)

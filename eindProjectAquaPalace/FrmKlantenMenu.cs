@@ -13,19 +13,11 @@ namespace eindProjectAquaPalace
 
     public partial class FrmKlantenMenu : Form
     {
-        public Gebruikers gebruikersobject;
-        public FrmKlantenMenu(Gebruikers gebruikersobject)
+        public FrmKlantenMenu()
         {
 
             InitializeComponent();
 
-            this.gebruikersobject = gebruikersobject;
-
-
-        }
-
-        public FrmKlantenMenu()
-        {
         }
 
         private void btnKlanten_Click(object sender, EventArgs e)

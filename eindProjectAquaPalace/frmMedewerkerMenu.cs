@@ -12,15 +12,9 @@ namespace eindProjectAquaPalace
 {
     public partial class frmMedewerkerMenu : Form
     {
-        public Gebruikers gebruikersobject;
-        public frmMedewerkerMenu(Gebruikers gebruikersobject)
-        {
-            InitializeComponent();
-            this.gebruikersobject = gebruikersobject;
-        }
-
         public frmMedewerkerMenu()
         {
+            InitializeComponent();
         }
 
         private void button2_Click(object sender, EventArgs e)

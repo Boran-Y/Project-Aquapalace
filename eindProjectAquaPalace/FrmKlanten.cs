@@ -13,32 +13,26 @@ namespace eindProjectAquaPalace
     
     public partial class FrmKlanten : Form
     {
-        public Gebruikers gebruikersobject;
-        public FrmKlanten(Gebruikers gebruikersobject)
-        {
-          
-            InitializeComponent();
-            this.gebruikersobject = gebruikersobject;
-        }
-
         public FrmKlanten()
         {
+          
+            InitializeComponent();        
         }
 
         private void btnTerug_Click(object sender, EventArgs e)
         {
             GebruikersRol Gebruiker = new GebruikersRol();
 
-            if( gebruikersobject != null )
+            if(frmInlogScherm.loggedInUser != null )
             {
-                if (gebruikersobject.Rol == GebruikersRol.Medewerker)
+                if (frmInlogScherm.loggedInUser.Rol == GebruikersRol.Medewerker)
                 {
                     if (frmMedewerkerMenu.ActiveForm != null)
                     {
                         frmMedewerkerMenu.ActiveForm.Show();
                     }
                 }
-                if(gebruikersobject.Rol == GebruikersRol.Beheerder)
+                if(frmInlogScherm.loggedInUser.Rol == GebruikersRol.Beheerder)
                 {
                     if (FrmBeheerderMenu.ActiveForm != null)
                     {
